@@ -10,6 +10,19 @@ $small:             "max-width: 960px"
   &::-webkit-scrollbar
     width: 0 !important
 
+#nav-toggle-container
+  display: none
+  padding: 1em
+  background-color: $nav-background
+  color: $nav-foreground
+
+  @media ($small)
+    display: flex
+    align-items: flex-end
+
+  p
+    margin: 0 0 0 1em
+
 body
   background-color: $background
   font: 18px monospace
@@ -17,6 +30,10 @@ body
   margin: 0
   display: flex
   height: 100%
+
+  @media ($small)
+    height: inherit
+    flex-direction: column
 
 #nav-pane
   flex: 0 0 auto
@@ -30,7 +47,10 @@ body
   justify-content: flex-start
 
   @media ($small)
-    display: none
+    max-width: 100%
+    width: 100%
+    &.gone
+      display: none
 
   a
     color: $nav-foreground
@@ -40,12 +60,16 @@ body
     width: 100%
     text-align: center
 
+    &.active
+      color: $accent
+
     &:hover
       background-color: $accent
       color: $nav-background
 
   img
     max-width: 100%
+    object-fit: cover
     padding-bottom: 0.5em
 
 #content-pane

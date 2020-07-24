@@ -3,9 +3,12 @@ $nav-background:    #383838
 $foreground:        #d8d8d8
 $nav-foreground:    #f8f8f8
 $accent:            #7cafc2
+$small:             "max-width: 960px"
 
-*::-webkit-scrollbar
-  width: 0 !important
+*
+  scrollbar-width: none
+  &::-webkit-scrollbar
+    width: 0 !important
 
 body
   background-color: $background
@@ -13,6 +16,7 @@ body
   color: $foreground
   margin: 0
   display: flex
+  height: 100%
 
 #nav-pane
   flex: 0 0 auto
@@ -24,6 +28,9 @@ body
   display: flex
   flex-direction: column
   justify-content: flex-start
+
+  @media ($small)
+    display: none
 
   a
     color: $nav-foreground
@@ -46,8 +53,14 @@ body
   padding: 2em 4em 2em 4em
   overflow: scroll
 
+  @media ($small)
+    padding: 0.5em
+
   .highlight
     color: $accent
 
   h1
     font-size: 48pt
+    @media ($small)
+      font-size: 24pt
+      text-align: center

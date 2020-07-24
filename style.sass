@@ -1,0 +1,53 @@
+$background:        #181818
+$nav-background:    #383838
+$foreground:        #d8d8d8
+$nav-foreground:    #f8f8f8
+$accent:            #7cafc2
+
+*::-webkit-scrollbar
+  width: 0 !important
+
+body
+  background-color: $background
+  font: 18px monospace
+  color: $foreground
+  margin: 0
+  display: flex
+
+#nav-pane
+  flex: 0 0 auto
+  color: $nav-foreground
+  background-color: $nav-background
+  width: percentage(1/6)
+  min-width: 8rem
+  max-width: 16rem
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+
+  a
+    color: $nav-foreground
+    text-decoration: none
+    padding-top: 0.5em
+    padding-bottom: 0.5em
+    width: 100%
+    text-align: center
+
+    &:hover
+      background-color: $accent
+      color: $nav-background
+
+  img
+    max-width: 100%
+    padding-bottom: 0.5em
+
+#content-pane
+  flex: 1 1 auto
+  padding: 2em 4em 2em 4em
+  overflow: scroll
+
+  .highlight
+    color: $accent
+
+  h1
+    font-size: 48pt

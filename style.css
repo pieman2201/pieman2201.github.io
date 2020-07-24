@@ -70,11 +70,18 @@ body {
   padding-bottom: 0.5em;
   width: 100%;
   text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 #nav-pane a.active {
   color: #7cafc2;
 }
-#nav-pane a:hover {
+#nav-pane a:hover, #nav-pane a:active {
   background-color: #7cafc2;
   color: #383838;
 }

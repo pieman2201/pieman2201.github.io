@@ -102,10 +102,13 @@ body {
   flex: 1 1 auto;
   padding: 2em 4em 2em 4em;
   overflow: scroll;
+  width: 100%;
+  max-width: 960px;
 }
 @media (max-width: 960px) {
   #content-pane {
-    padding: 0.5em;
+    padding: 0.5em 1.5em;
+    width: inherit;
   }
   #content-pane.gone {
     display: none;
@@ -119,9 +122,12 @@ body {
 }
 @media (max-width: 960px) {
   #content-pane h1 {
-    font-size: 24pt;
+    font-size: 32pt;
     text-align: center;
   }
+}
+#content-pane h1 .highlight {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,7 +3,8 @@ $nav-background:    #383838
 $foreground:        #d8d8d8
 $nav-foreground:    #f8f8f8
 $accent:            #7cafc2
-$small:             "max-width: 960px"
+$small-size:        960px
+$small:             "max-width: #{$small-size}"
 
 *
   scrollbar-width: none
@@ -90,9 +91,12 @@ body
   flex: 1 1 auto
   padding: 2em 4em 2em 4em
   overflow: scroll
+  width: 100%
+  max-width: $small-size
 
   @media ($small)
-    padding: 0.5em
+    padding: 0.5em 1.5em
+    width: inherit
     &.gone
       display: none
 
@@ -102,5 +106,9 @@ body
   h1
     font-size: 48pt
     @media ($small)
-      font-size: 24pt
+      font-size: 32pt
       text-align: center
+
+    .highlight
+      display: inline-block
+

@@ -10,6 +10,7 @@ $small:             "max-width: #{$small-size}"
   scrollbar-width: none
   &::-webkit-scrollbar
     width: 0 !important
+    height: 0 !important
 
 #nav-toggle-container
   display: none
@@ -147,6 +148,16 @@ body
       color: #86c1b9
     .orange
       color: #dc9656
+    .white
+      color: $foreground
 
+  .double-list-container
+    display: flex
+    @media ($small)
+      flex-direction: column
+
+    .list
+      margin-top: 1em
+      margin-right: 1em
 
 

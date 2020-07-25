@@ -3,6 +3,7 @@
 }
 *::-webkit-scrollbar {
   width: 0 !important;
+  height: 0 !important;
 }
 
 #nav-toggle-container {
@@ -171,6 +172,21 @@ body {
 }
 #content-pane #content-main .orange {
   color: #dc9656;
+}
+#content-pane #content-main .white {
+  color: #d8d8d8;
+}
+#content-pane .double-list-container {
+  display: flex;
+}
+@media (max-width: 960px) {
+  #content-pane .double-list-container {
+    flex-direction: column;
+  }
+}
+#content-pane .double-list-container .list {
+  margin-top: 1em;
+  margin-right: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

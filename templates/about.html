@@ -22,4 +22,43 @@ For my freshman year of college, I attended <span class="orange">the University 
 I've since transferred to <span class="blue">Rice University</span> in Houston,
 where I'll be pursuing a major in Computer Science with a minor in Financial Computation and Modeling.
 </p>
+
+<div class="double-list-container">
+    {% macro list(header, color, items) -%}
+    <div class="list {{ color }}">
+        <p>{{ header | safe }}:</p>
+        <ul>
+            {% for item in items %}
+            <li><span class="white">{{ item | safe }}</span></li>
+            {% endfor %}
+        </ul>
+    </div>
+    {%- endmacro %}
+
+    {{ list("Things I enjoy", "green", [
+    "Vim",
+    "the flag of Albania",
+    "i3wm",
+    "Breaking Bad",
+    "playing with my cat",
+    "The Phantom Tollbooth",
+    "sudo pacman -Syu",
+    "4-space indents",
+    "Rocket League",
+    "ConstraintLayout",
+    "base16 colorscheme",
+    "AMD Ryzen"
+    ]) }}
+    {{ list("Things I do not enjoy", "red", [
+    "Eclipse",
+    "the flag of Zambia",
+    "the macOS desktop environment",
+    "Windows Update",
+    "tab indents",
+    "Comcast",
+    "pointer acceleration",
+    "light themes",
+    "AMD Radeon"
+    ]) }}
+</div>
 {% endblock %}

@@ -91,13 +91,14 @@ body
   img
     max-width: 100%
     object-fit: cover
-    padding-bottom: 0.5em
+    margin-bottom: 0.5em
     @media ($small)
       display: none
 
 #content-pane
   flex: 1 1 auto
-  padding: 2em 4em 2em 4em
+  padding-left: 4em
+  padding-right: 4em
   overflow: scroll
   width: 100%
   max-width: $small-size
@@ -111,12 +112,25 @@ body
   .highlight
     color: $accent
 
-  h1
-    font-size: 48pt
-    @media ($small)
-      font-size: 32pt
-      text-align: center
+  #content-header
+    width: 100%
+    display: flex
+    align-items: center
+    margin-bottom: 0.5em
 
-    .highlight
-      display: inline-block
+    h1
+      font-size: 48pt
+      @media ($small)
+        font-size: 32pt
+        width: 100%
+        text-align: center
+
+      .highlight
+        display: inline-block
+
+  #content-main
+    padding-top: 0.5em
+    p
+      margin-top: 0
+      margin-bottom: 1em
 

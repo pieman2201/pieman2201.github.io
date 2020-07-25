@@ -13,7 +13,7 @@
                     $('#content-header').css('height', 'auto');
                 } else {
                     $('#content-header').height(
-                        $('#nav-pane > img').height()
+                        $('#nav-pane').width()
                     );
                 }
             }
@@ -30,6 +30,7 @@
                     }
                 );
             });
+
             $(window).resize(function() {
                 setHeaderHeight();
             });

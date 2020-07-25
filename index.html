@@ -9,10 +9,10 @@
             crossorigin="anonymous"></script>
         <script>
             $(document).ready(function() {
-                console.log($(location).attr('href'));
                 $('#nav-pane > a').each(
                     function (index, value) {
-                        if ($(this).hasClass('active')) {
+                        if ($(this).attr('href') === window.location.pathname) {
+                            $(this).addClass('active');
                             $('#nav-current-title').html($(this).html());
                             $(this).addClass('gone');
                         }
@@ -38,10 +38,10 @@
         </div>
         <div id="nav-pane" class="gone">
             <img src="pfp.jpeg">
-            <a href="">Home</a>
-            <a href="about">About</a>
-            <a href="portfolio">Portfolio</a>
-            <a href="fun">Fun</a>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/fun">Fun</a>
         </div>
         <div id="content-pane">
             <h1>Hi, I'm <span class="highlight">Ishan Kamat</span></h1>

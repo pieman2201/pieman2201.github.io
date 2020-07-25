@@ -8,8 +8,8 @@
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"></script>
         <script>
-            console.log("hello!");
             $(document).ready(function() {
+                console.log($(location).attr('href'));
                 $('#nav-pane > a').each(
                     function (index, value) {
                         if ($(this).hasClass('active')) {
@@ -38,7 +38,7 @@
         </div>
         <div id="nav-pane" class="gone">
             <img src="pfp.jpeg">
-            <a href="" class="active">Home</a>
+            <a href="">Home</a>
             <a href="about">About</a>
             <a href="portfolio">Portfolio</a>
             <a href="fun">Fun</a>

@@ -5,5 +5,23 @@
 {% endblock %}
 
 {% block c_main %}
-<p>//TODO: work on impressive stuff</p>
+<div class="list">
+    <p>Here's a list of some projects that I've worked on, arranged in no particular order:</p>
+    <ul>
+        {% for item in portfolio %}
+        <li>
+            <div class="portfolio-item">
+                <div class="portfolio-item-header">
+                    <p class="portfolio-item-name">{{ item.name | safe }}</p>
+                    <p class="portfolio-item-sep">--</p>
+                    <p class="portfolio-item-tech">{{ item.tech | safe }}</p>
+                </div>
+                <p class="portfolio-item-summary">
+                    {{ item.summary | safe }}
+                </p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}

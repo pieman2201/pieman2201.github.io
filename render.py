@@ -40,7 +40,7 @@ def load_portfolio():
             'summary': item.split('\n')[2]
             } for item in items]
 
-env.get_template('index.html').stream().dump('index.html')
+env.get_template('home.html').stream().dump('index.html')
 env.get_template('about.html').stream().dump('about/index.html')
 env.get_template('portfolio.html').stream(
         portfolio = load_portfolio()

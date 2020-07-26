@@ -1,6 +1,17 @@
 <html>
     <head>
+
+        {% set page_title = self._TemplateReference__context.name.split('.')[0].title() %}
+
+        <title>{{ page_title }}</title>
+
+        <!-- for telegram -->
+        <meta property="og:title" content="{{ page_title }}" />
+        <meta property="og:site_name" content="Ishan Kamat" />
+
+
         <link rel="stylesheet" href="/style.css">
+        <link rel="icon" type="image/jpeg" href="/pfp.jpeg"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script

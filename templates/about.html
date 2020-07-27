@@ -4,24 +4,28 @@
 <h1>Who am I?</h1>
 {% endblock %}
 {% block c_main %}
+
+{% set about_text = '
 <p>
-I'm a
+I\'m a
 <span class="green">programmer</span>,
 tech enthusiast, college student,
 <span class="cyan">Arch Linux</span>
 user, vexillologist, novice cook, and the proprietor of this site.
 </p>
 <p>
-My language of choice is <span class="blue">Python</span>,
-and I'm also versed in <span class="magenta">C</span> and <span class="red">Java</span> (especially for <span class="green">Android</span> apps).
-I have some experience with <span class="yellow">HTML/CSS/JS/jQuery</span>, and I've used
-<span class="green">Vue</span>.js, <span class="red">Materialize</span>, and <span class="magenta">PHP/WordPress</span>.
+My language of choice is Python,
+and I\'m also versed in C and Java (especially for Android apps).
+I have some experience with HTML/<wbr>CSS/<wbr>JS/<wbr>jQuery, and I\'ve used Vue, Materialize, and PHP/<wbr>WordPress.
 </p>
 <p>
 For my freshman year of college, I attended <span class="orange">the University of Texas at Austin</span>.
-I've since transferred to <span class="blue">Rice University</span> in Houston,
-where I'll be pursuing a major in Computer Science with a minor in Financial Computation and Modeling.
+I\'ve since transferred to <span class="blue">Rice University</span> in Houston,
+where I\'ll be pursuing a major in Computer Science with a minor in Financial Computation and Modeling.
 </p>
+' %}
+
+{{ color_function(about_text) | safe }}
 
 <div class="double-list-container">
     {% macro list(header, color, items) -%}

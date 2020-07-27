@@ -188,6 +188,11 @@ body {
 #content-pane #content-main .portfolio-item .portfolio-item-name {
   font-weight: bold;
 }
+@media (max-width: 960px) {
+  #content-pane #content-main .portfolio-item .portfolio-item-name {
+    flex: 1 0 auto;
+  }
+}
 #content-pane #content-main .portfolio-item .portfolio-item-sep {
   visibility: hidden;
 }

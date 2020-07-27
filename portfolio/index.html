@@ -35,9 +35,14 @@
                 setHeaderHeight();
                 $('#nav-pane > a').each(
                     function (index, value) {
-                        if ($(this).attr('href') === window.location.pathname) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
                             $(this).addClass('active');
                             $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
                             $(this).addClass('gone');
                         }
                     }
@@ -62,7 +67,7 @@
     <body>
         <div id="nav-toggle-container">
             <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
-            <p id="nav-current-title"></p>
+            <a id="nav-current-title"></a>
         </div>
         <div id="nav-pane" class="gone">
             <img src="/pfp.jpeg">

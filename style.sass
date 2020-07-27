@@ -12,6 +12,15 @@ $small:             "max-width: #{$small-size}"
     width: 0 !important
     height: 0 !important
 
+a
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  -webkit-tap-highlight-color: transparent
+
 #nav-toggle-container
   display: none
   padding: 1em
@@ -23,7 +32,9 @@ $small:             "max-width: #{$small-size}"
     align-items: flex-end
 
   #nav-current-title
+    color: $nav-foreground
     margin: 0 0 0 1em
+    text-decoration: none
     @media ($small)
       &.gone
         color: $accent
@@ -66,14 +77,6 @@ body
     padding-bottom: 0.5em
     width: 100%
     text-align: center
-
-    -webkit-touch-callout: none
-    -webkit-user-select: none
-    -khtml-user-select: none
-    -moz-user-select: none
-    -ms-user-select: none
-    user-select: none
-    -webkit-tap-highlight-color: transparent
 
     &.active
       color: $accent

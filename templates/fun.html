@@ -5,5 +5,17 @@
 {% endblock %}
 
 {% block c_main %}
-<p>//TODO: have fun</p>
+<div class="list">
+    <p>Here are some posts that I've written:</p>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <div class="blog-post-item">
+                <a href="{{ post.link }}">{{ post.title }}</a>
+                <p>{{ post.time | safe }}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}

@@ -80,7 +80,8 @@ def strip_html_tags(line):
 
 def process_blog():
     posts = []
-    for fn in sorted(glob('mkd_fun/*.md'), key = os.path.getmtime, reverse = True):
+    for fn in sorted(glob('markdown/*/*.md'), key = os.path.getmtime, reverse = True):
+        print(fn)
         with open(fn) as f:
             post = {}
             rendered = mkd.convert(f.read())
@@ -88,13 +89,18 @@ def process_blog():
             rendered = rendered.replace('<h1>', '{% block c_header %}<h1>', 1)
             rendered = rendered.replace('</h1>', '</h1>{% endblock %}{% block c_main %}', 1)
             rendered += '{% endblock %}'
-            nfn = 'fun/' + ('.'.join(fn.split('.')[:-1] + ['html'])).split('/')[-1]
-            post['link'] = '/' + nfn
+
+            folder_name, file_name = fn.split('/')[1:3]
+            file_name = '.'.join(file_name.split('.')[:-1] + ['html'])
+
+            os.mkdir('docs/fun/' + folder_name)
+
+            post['link'] = '/fun/' + folder_name
             post['time'] = datetime.fromtimestamp(os.path.getmtime(fn)).strftime(
                     'Updated at %H:%M on <span style="display: inline-block">%b %-d %Y</span>')
             env.from_string('{% extends "base.html" %}' + rendered).stream(
                     use_header_as_title = True
-                    ).dump('docs/' + nfn)
+                    ).dump('docs/fun/' + folder_name + '/' + file_name)
             posts.append(post)
     return posts
 

@@ -94,18 +94,18 @@ def process_blog():
                     'Updated at %H:%M on <span style="display: inline-block">%b %-d %Y</span>')
             env.from_string('{% extends "base.html" %}' + rendered).stream(
                     use_header_as_title = True
-                    ).dump('docs/' + nfn)
+                    ).dump(nfn)
             posts.append(post)
     return posts
 
 
-env.get_template('home.html').stream().dump('docs/index.html')
+env.get_template('home.html').stream().dump('index.html')
 env.get_template('about.html').stream(
         color_function = color_about
-        ).dump('docs/about/index.html')
+        ).dump('about/index.html')
 env.get_template('portfolio.html').stream(
         portfolio = load_portfolio()
-        ).dump('docs/portfolio/index.html')
+        ).dump('portfolio/index.html')
 env.get_template('fun.html').stream(
         posts = process_blog()
-        ).dump('docs/fun/index.html')
+        ).dump('fun/index.html')

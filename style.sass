@@ -135,14 +135,19 @@ body
 
   #content-main
     padding-top: 0.5em
-    p
-      margin-top: 0
-      margin-bottom: 1em
 
     img
       max-width: $small-size / 2
+      margin: 1em
       @media ($small)
+        margin: 1em 0
         max-width: 100%
+
+    p
+      margin-top: 0
+      margin-bottom: 1em
+      & > img:first-child
+        margin-top: 0
 
     .red
       color: #ab4642

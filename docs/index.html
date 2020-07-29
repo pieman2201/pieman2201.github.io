@@ -1,1 +1,91 @@
-<html><body><h1>HELLO!!!</h1></body></html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+
+        <meta property="og:site_name" content="Ishan Kamat" />
+        <meta property="og:image" content="http://ishankam.at/pfp.jpeg" />
+
+        
+        
+        <meta property="og:description" content="Hi, I&#39;m Ishan Kamat" />
+        
+
+        <title>Home</title>
+        <meta property="og:title" content="Home" />
+
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="icon" type="image/jpeg" href="/pfp.jpeg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+        <script>
+            function setHeaderHeight() {
+                if ($('#nav-pane > img').css('display') === "none") {
+                    $('#content-header').css('height', 'auto');
+                } else {
+                    $('#content-header').height(
+                        $('#nav-pane').width()
+                    );
+                }
+            }
+
+            $(document).ready(function() {
+                setHeaderHeight();
+                $('#nav-pane > a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
+                            $(this).addClass('active');
+                            $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
+                            $(this).addClass('gone');
+                        }
+                    }
+                );
+            });
+
+            $(window).resize(function() {
+                setHeaderHeight();
+            });
+
+            function toggleMenu() {
+                var btn = $('#nav-toggle');
+                $('#nav-pane').removeClass('gone');
+                $('#content-pane').removeClass('gone');
+                if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
+                else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
+                $((btn.html() === 'menu') ? '#nav-pane' : '#content-pane').addClass('gone');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-toggle-container">
+            <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
+            <a id="nav-current-title"></a>
+        </div>
+        <div id="nav-pane" class="gone">
+            <img src="/pfp.jpeg">
+            <a href="/">Home</a>
+            <a href="/about/">About</a>
+            <a href="/portfolio/">Portfolio</a>
+            <a href="/fun/">Fun</a>
+        </div>
+        <div id="content-pane">
+            <div id="content-header">
+                
+<h1>Hi, I'm <span class="highlight">Ishan Kamat</span></h1>
+
+            </div>
+            <div id="content-main">
+                
+            </div>
+        </div>
+    </body>
+</html>

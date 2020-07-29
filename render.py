@@ -66,7 +66,7 @@ def process_tech(tech):
     return '/<wbr>'.join([color_tech_term(term) for term in tech_terms])
 
 def load_portfolio():
-    with open('raw_portfolio') as raw:
+    with open('sources/raw_portfolio') as raw:
         content = raw.read()
         items = content.split('\n=\n')
         return [{
@@ -94,18 +94,18 @@ def process_blog():
                     'Updated at %H:%M on <span style="display: inline-block">%b %-d %Y</span>')
             env.from_string('{% extends "base.html" %}' + rendered).stream(
                     use_header_as_title = True
-                    ).dump(nfn)
+                    ).dump('docs/' + nfn)
             posts.append(post)
     return posts
 
 
-env.get_template('home.html').stream().dump('index.html')
+env.get_template('home.html').stream().dump('docs/index.html')
 env.get_template('about.html').stream(
         color_function = color_about
-        ).dump('about/index.html')
+        ).dump('docs/about/index.html')
 env.get_template('portfolio.html').stream(
         portfolio = load_portfolio()
-        ).dump('portfolio/index.html')
+        ).dump('docs/portfolio/index.html')
 env.get_template('fun.html').stream(
         posts = process_blog()
-        ).dump('fun/index.html')
+        ).dump('docs/fun/index.html')

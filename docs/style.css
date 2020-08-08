@@ -164,6 +164,11 @@ body {
     max-width: 100%;
   }
 }
+#content-pane #content-main img#cloud {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+}
 #content-pane #content-main p {
   margin-top: 0;
   margin-bottom: 1em;
@@ -241,3 +246,5 @@ body {
   margin-top: 1em;
   margin-right: 1em;
 }
+
+/*# sourceMappingURL=style.css.map */

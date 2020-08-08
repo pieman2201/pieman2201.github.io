@@ -85,6 +85,23 @@
             </div>
             <div id="content-main">
                 
+<p>Here's a cloud which ought to summarize my site:</p>
+<img id="cloud">
+<script>
+    function resizeCloud() {
+        var height = window.innerHeight - $('#cloud')[0].offsetTop - parseInt($('#content-pane').css('padding-bottom'));
+        var width  = $('#cloud')[0].width;
+        var ratio = Math.floor(width / height);
+        while (width / ratio > height) {
+            ratio += 0.1;
+        }
+        $('#cloud')[0].src = 'clouds/cloud-' + ratio.toFixed(1) + '.svg';
+    }
+    $(window).resize(resizeCloud);
+    $(document).ready(resizeCloud);
+</script>
+
+
             </div>
         </div>
     </body>

@@ -2,7 +2,10 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markdown2 import Markdown
 from pathlib import Path
 from datetime import datetime
-import string
+from bs4 import BeautifulSoup
+from wordcloud import WordCloud
+from colour import Color
+from nltk.corpus import stopwords
 import re
 import os
 import shutil
@@ -12,7 +15,6 @@ env = Environment(
         autoescape  = select_autoescape(['html','xml'])
         )
 mkd = Markdown()
-
 
 COLOR_MAP = {
         'red':      [
@@ -46,12 +48,12 @@ COLOR_MAP = {
         }
 
 act_cm = {k: v for d in [{val: key for val in vals} for key, vals in COLOR_MAP.items()] for k, v in d.items()}
-
+punct  = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ '
 
 def color_about(text):
     terms = ['']
     for char in text:
-        if char not in string.punctuation + ' ':
+        if char not in punct:
             terms[-1] += char
         else:
             terms.append(char)
@@ -125,18 +127,71 @@ os.mkdir('docs')
 os.mkdir('docs/about')
 os.mkdir('docs/portfolio')
 os.mkdir('docs/fun')
+os.mkdir('docs/clouds')
 shutil.copy('sources/style.css', 'docs')
 shutil.copy('sources/pfp.jpeg', 'docs')
 shutil.copy('sources/CNAME', 'docs')
 
 
-env.get_template('home.html').stream().dump('docs/index.html')
-env.get_template('about.html').stream(
+def load(template):
+    template = env.get_template(template)
+    return template
+
+load('home.html').stream().dump('docs/index.html')
+load('about.html').stream(
         color_function = color_about
         ).dump('docs/about/index.html')
-env.get_template('portfolio.html').stream(
+load('portfolio.html').stream(
         portfolio = load_portfolio()
         ).dump('docs/portfolio/index.html')
-env.get_template('fun.html').stream(
+load('fun.html').stream(
         posts = process_blog()
         ).dump('docs/fun/index.html')
+
+
+def get_word_tallies():
+    tallies = {}
+    html_files = list(Path('docs/').rglob('*.html'))
+    for file in html_files:
+        with file.open() as f:
+            soup = BeautifulSoup(f.read(), 'html.parser')
+            content = soup.find(id = 'content-main')
+            text = ''.join([c if c not in punct + '\n' else ' ' for c in str(content.text)])
+            for term in text.split(' '):
+                if len(term) > 2 and term not in stopwords.words('english'):
+                    tallies[term.lower()] = tallies.get(term.lower(), 0) + 1
+    return tallies
+
+def get_color_gradient(start, stop, steps):
+    colors = []
+    for x in range(steps):
+        start_part = [(steps - x - 1) * v for v in start.rgb]
+        stop_part  = [x * v for v in stop.rgb]
+        combined = [sum(p) / (steps - 1) for p in zip(start_part, stop_part)]
+        colors.append(combined)
+    return colors
+
+def create_svg_from_tallies(tallies):
+    max_tally = max(tallies.values())
+    text = ''.join([(word + ' ') * tallies[word] for word in sorted(tallies.keys(), key = lambda x: tallies[x])])
+    start_color = Color("#7cafc2")
+    stop_color  = Color("#d8d8d8")
+    gradient = get_color_gradient(start_color, stop_color, max_tally)
+    height = 512
+    for r in range(1, 50):
+        ratio = r / 10
+        width = int(height * ratio)
+        wordcloud = WordCloud(
+                width = width, height = height,
+                color_func = lambda word, *args, **kwargs: Color(rgb=gradient[tallies[word] - 1]),
+                normalize_plurals = False,
+                collocations = False,
+                background_color = "#181818"
+                ).generate(text)
+        with open('docs/clouds/cloud-%.1f.svg' % ratio, 'w') as f:
+            f.write(wordcloud.to_svg())
+
+
+create_svg_from_tallies(get_word_tallies())
+
+

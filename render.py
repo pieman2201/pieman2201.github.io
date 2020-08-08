@@ -189,7 +189,7 @@ def create_svg_from_tallies(tallies):
                 background_color = "#181818"
                 ).generate(text)
         with open('docs/clouds/cloud-%.1f.svg' % ratio, 'w') as f:
-            f.write(wordcloud.to_svg())
+            f.write(wordcloud.to_svg(embed_font = True))
 
 
 create_svg_from_tallies(get_word_tallies())

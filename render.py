@@ -130,6 +130,7 @@ os.mkdir('docs/fun')
 os.mkdir('docs/clouds')
 shutil.copy('sources/style.css', 'docs')
 shutil.copy('sources/pfp.jpeg', 'docs')
+shutil.copy('sources/resume.pdf', 'docs')
 shutil.copy('sources/CNAME', 'docs')
 
 
@@ -149,6 +150,8 @@ load('fun.html').stream(
         ).dump('docs/fun/index.html')
 
 
+print
+
 def get_word_tallies():
     tallies = {}
     html_files = list(Path('docs/').rglob('*.html'))
@@ -158,7 +161,7 @@ def get_word_tallies():
             content = soup.find(id = 'content-main')
             text = ''.join([c if c not in punct + '\n' else ' ' for c in str(content.text)])
             for term in text.split(' '):
-                if len(term) > 2 and term not in stopwords.words('english'):
+                if (len(term) > 2 or (len(term) == 2 and term.lower() != term)) and term.lower() not in stopwords.words('english'):
                     tallies[term.lower()] = tallies.get(term.lower(), 0) + 1
     return tallies
 
@@ -193,5 +196,3 @@ def create_svg_from_tallies(tallies):
 
 
 create_svg_from_tallies(get_word_tallies())
-
-

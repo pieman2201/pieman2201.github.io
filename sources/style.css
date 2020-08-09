@@ -176,6 +176,12 @@ body {
 #content-pane #content-main p > img:first-child {
   margin-top: 0;
 }
+#content-pane #content-main a {
+  color: #d8d8d8;
+}
+#content-pane #content-main a:hover, #content-pane #content-main a:active {
+  color: #7cafc2;
+}
 #content-pane #content-main .red {
   color: #ab4642;
 }

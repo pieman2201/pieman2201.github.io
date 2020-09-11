@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from wordcloud import WordCloud
 from colour import Color
 from nltk.corpus import stopwords
+import random
 import re
 import os
 import shutil
@@ -133,6 +134,7 @@ shutil.copy('sources/favicon.ico', 'docs')
 shutil.copy('sources/pfp.png', 'docs')
 shutil.copy('sources/resume.pdf', 'docs')
 shutil.copy('sources/CNAME', 'docs')
+shutil.copy('sources/sitemap.txt', 'docs')
 
 
 def load(template):
@@ -150,8 +152,6 @@ load('fun.html').stream(
         posts = process_blog()
         ).dump('docs/fun/index.html')
 
-
-print
 
 def get_word_tallies():
     tallies = {}
@@ -190,7 +190,8 @@ def create_svg_from_tallies(tallies):
                 color_func = lambda word, *args, **kwargs: Color(rgb=gradient[tallies[word] - 1]),
                 normalize_plurals = False,
                 collocations = False,
-                background_color = "#181818"
+                background_color = "#181818",
+                random_state = random.Random(662607004)
                 ).generate(text)
         with open('docs/clouds/cloud-%.1f.svg' % ratio, 'w') as f:
             f.write(wordcloud.to_svg(embed_font = True))

@@ -164,6 +164,8 @@ def get_word_tallies():
             for term in text.split(' '):
                 if (len(term) > 2 or (len(term) == 2 and term.lower() != term)) and term.lower() not in stopwords.words('english'):
                     tallies[term.lower()] = tallies.get(term.lower(), 0) + 1
+    # for key in tallies.keys():
+    #     print(key)
     return tallies
 
 def get_color_gradient(start, stop, steps):
@@ -181,7 +183,7 @@ def create_svg_from_tallies(tallies):
     start_color = Color("#7cafc2")
     stop_color  = Color("#d8d8d8")
     gradient = get_color_gradient(start_color, stop_color, max_tally)
-    height = 512
+    height = 800
     for r in range(1, 50):
         ratio = r / 10
         width = int(height * ratio)
@@ -191,7 +193,8 @@ def create_svg_from_tallies(tallies):
                 normalize_plurals = False,
                 collocations = False,
                 background_color = "#181818",
-                random_state = random.Random(662607004)
+                max_words = len(tallies.keys()),
+                random_state = random.Random(sum(tallies.values()))
                 ).generate(text)
         with open('docs/clouds/cloud-%.1f.svg' % ratio, 'w') as f:
             f.write(wordcloud.to_svg(embed_font = True))

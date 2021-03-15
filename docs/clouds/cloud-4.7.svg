@@ -1,344 +1,355 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="3760" height="800">
-<style>@font-face{font-family:'Droid Sans Mono';font-weight:normal;font-style:normal;src:url("data:application/font-woff;charset=utf-8;base64,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")format("woff");}</style>
+<style>@font-face{font-family:'Droid Sans Mono';font-weight:normal;font-style:normal;src:url("data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAuwAAsAAAAADmwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABeAAAAFYAAABgfWh2PWNtYXAAAAIYAAAAOgAAAEQAUQEaZ2FzcAAAC6QAAAAMAAAADAAEAAdnbHlmAAACnAAACCQAAApslfNFH2hlYWQAAAEIAAAANgAAADYCE644aGhlYQAAAUAAAAAgAAAAJAw9AuhobXR4AAAB0AAAAEYAAABGDxQJf2xvY2EAAAJUAAAARgAAAEYvgCzybWF4cAAAAWAAAAAYAAAAIAAmADhuYW1lAAAKwAAAAMsAAAFoHBo1AHBvc3QAAAuMAAAAFgAAACD/aQBnAAEAAAABAABFuEMnXw889QALCAAAAAAAwcfpVAAAAADcX3uz//z+FATRBh8AAAAJAAIAAAAAAAB4nGNgZGBgz/0ny8DAcvb/n/9/WC4yAEVQACMArNsHL3icY2BkYGBQYjBnYGYAAUYGNAAACYoAX3icY2BmOcs4gYGVgYN1FqsxAwOjHIRmvsCQxviJgYGJm42TmYOFiYmFASjJgAQMHYOdGRwYDBiq2OT/iTC0sOcyPlZgYJwPkmPxYt0GpBQYGABTfAyOAAAEzQDBAJMA4QCeAIMAmgCPAJwAhwCeAKwAiQCFAJwAZgCgAMUAhwDXALwAXACgAHMAngCJAQgAywCLAKAAUv/8AGAAUgC2AAB4nGNgYGBiYGBgBmIRIMkIplkYDIA0BxCC5IwZLBiq/v8HsgwYzBgS////f/H/+f/LwWrBAADjJwtlAAAAAAAAACsAQgBqAJ8A1QDoASgBXAGMAbIB4wIPAjQCggKiAsUC7AMNAyQDVANyA5sDzAP9BBsESgRtBIwEpwTXBPYFHwU2AAB4nF1WDVBT2RW+572Xl4iMJCQha9ktPNKQoSxjSQipWnSt2loWu7uMupSxLquACo67gsogxUiZCEh3bAwiBaX8le6sFJGyGf8rG3+XCsMI1XG7RYqitKxS6m4V8649N0GlnUleYCb3O9/5zvm+G8IR97NxYb7iGplF9IQoojiNWrKEatQm9uCM7P9QLvPuOPTf/4rGuvftc7vKynRQClu5CVpM3XJIHcyFJFgIc+kY9dLP6H1CgAwTwn2j8JAgQiSjJsEuKpVmsHLfdKjMqe73wVHNu3Y9jP1RYRHE4rfrCRHiFD3EgN+WbJCYaEuINkYpzYlWS5heJypBLwlxvm2wzvsLx5aG+uzzo5/d3nmf3uM6DkPxYP/ubaUVBW0DfyyYmqKDKsQrxZ4iEC8KqegFjU6Qosy2MGsk9ma0WS3/B895YDMdp08nXScuw3pa6nQ2dJTndbauPf2k914Lz4nz6PWesbc+yQAJuEM1xdkFhcXVl3637xThSC1WsmIlPZFYLYTleGsAF8UjTEwtKybqdWFYmL/44/duDwcFvzfg/fJfPbeozDk2cRUOR1tTqWO/4kTdK3SU9n7yoPcOfQLvQAKf7gt2HW7aVPNlB3a1H1VaiJqKqBJINkkP8FPOKs/h2+RBhbrVNfUFITw5jIzicZ5a8m0Sg5wE7NAYFW1Tm6JtCQFmioAAjJMBH5JfEDPnA5uv7+YkfOufY50n7tDs+7u35hRv2EJBV35w9yFebBj79K99pwDKDww1nj3XNGrfeCwrJycrvfhG4Z8nSnekVybj0EkZ1ueEdThLVEQyG8Xp6nZbwgvNNbxSxMJsErzDpFrZtKf5JNCeR+5PF184PdLT1XSh5Yr7WM37b7bVQYpauXw8tSKj/bys5uYqVblbO5ursE491lkm6kgoeZUQk1Fp1Fg1OiXTPrC4vC4w8CgRVgWbnB6VKvfG1bujV/ryK2tATR/U7a2sFHW0/B1XCx2kj+gkvc4tHOmGVqg/wza4DfFN2IcW/1FGGxmUxa4XjZE4VCJZBNOi6p30I9h8pGWvlz6jdyAKlJ2CsX4+3UBzFjUkgRHU6IxopkkFYs3zc32NcRUDtrJaDNZoG9I28mwe/gqJfIlqWz/j2bs9ONjjNlbW0AkIrXG6fw+xEAxzIK6hRIKuJ+MwFTPSTdPp+uOsghMrrEC2GhKGfKXQAFe2gAQF0ZsktRQprPBNqeBt77HWS1/TWxAyMiD7KJdEJ+hXHEcrUhrexBIiBIGdPhoyQjxT4TDuXLoYwbIBJI1RI9lM/i0yKP0LhL7U0SIP9UJSV39JUcymjUVp4OS7fYv57q1SRne7cf+rmfmb2F5mU52QjQy/Q14nicwryjD/ZprZIrClwFHhhtr978CqGngLWxq9DthDikSVhOwLSwbP2SMyG0+3n5B7bo1MZDh/lj14cc0btUPDw7D8zCiEQGWmkLwtfPWexj+J31+5qnY/LWt0DSyYl/vh26ajWZ6LOvnM6MPJERp8qX0oLYl12cDyB+ejwY3VqHESGrZNbJnwT77gAb3m8aiCNo6Bk/OCQPPky7g5ll9/TD+QrUz9i3jeKs4hKpwwAYu/L1uC1mSTNAo9SsYV5iyOzQ2h/wYvZPgOQJo4J2/B/Pw8uU1f5FuuKyrS+Z1DdfwaRFGyHGQoDARsLDdsGobFYLl7ubk5NGhv3Y5SupZL/3tvC2Ll5+c9jqk152UJ8/VFT5d0ebGnG8gJF5zMQSw7WAH3UelviwdHGVT+jYZyQYN0TUlXl5qLqYEKapJd8DiVpos6OZEOIQLaQIhFhFmI8LIVHX3k78IFaQqnftdUkZ8+kLX47XycbyTTMBAvWE49/Wk1MGcarNP277ctevetxuJVK5oc4UFL9zZbxJT9e7Zz3gN5rV65iYn824fyZSG56mOP5+RNFHl6Roivnjkjw8wRucP/Z0TstH9AHMlHd6Th2dnMzYppV7CnmZkO39z6m3QMQkZvQRh9cBsS6RXao0PZBFDC9+jn6O//0N5D0AINNIOuZemD27wMEacdHfayx+n00c+MHzRyuGrrwMz4qXFWlkg0VkxEks/jJzMmkD8d/szACvOeVwCrHWMC79GX2aGdkRmFqnC3Jzg4EBysQiAzeE/Vk89hMKbkRXbIh1+EBoAKFTUGFAVl9IxBYReCMb4oq/m4pypMldLu2CnEt8adPCZ3CMlXC7KZY3qmUz6CEDu7WdkF8ty1DItdLWEBg/d0Hwft+uNjhUMXLx39gadiPMtzvfIff3kc37qmaf6qN951bSivSz64wpn0kyUrD26pPorolQxd8QGblolFrobljtaqkfRoAquF9/1yF62mX8PslZvBQ5PP/7x6XySkccXr4iGCflEhl3r9rkaUOCHZ72q8hxiMVaP2uwldUBsetPkuLfSMN1Z5MFxd3DU5ifpODnALnnrY6VRUpxBPz2a3rVUbhrpotWijSZpxZmJ1iKhc9/AszRCS5e331r0Oc7lf4TF45sNT/XhqLp7ieSN7Bc7atS8+eT6udJm4pOzsUNP6KIMYYXJ2O2JfESNey64f5lZBMu1kQsvDp/pO/oH7oXzO2zx5iIsIsMpA/JwAK2Cm9vsaX5QW9OENZOyjO+BIL27s1T7OyhloNtTKY/I16KIprCfcKdYT3hHYyjQdYDe02R8zdnvqGRBTlaJhKTZnWtp5ZE3qouSM3O8uQD5511Z/2IVtmtuPaVzBqZnVjA+SEnSIOCvwy83/qwTvBF8TVyV/xMfKhdxvivllFQd8/eS/I4ZTnHicfY5BDsFQFEUPiphYgIH8BSCKxFhIjExIDMyqpJpIK8WABViBTdiJBVmA2+9LjKS5zX3v3XfeB6qsKFHwasBO+vgCTVUfX6TOzfkSA+7Oez+ZMi2ezldo8GJCTCSdpCtbNhgpUB3IhaQcuJDZ1E5dw0Pq0dU3FM0wVSbVdK9tw1g+007+Dyw1JaGjO5lcbPkLTRKOcjM7TZlrN+IsRqDcSLNQnUTprWpDW/pPWNrk0d0z+LqZv9GwFjcWeWO7Pv0f0pfjKG8rUjU3AHicY2BmAIP/aQxpQIqRAQ0AACn+AdAAAAAAAAIABQAC//8AAw==")format("woff");}</style>
 <style>text{font-family:'Droid Sans Mono';font-weight:normal;font-style:normal;}</style>
 <rect width="100%" height="100%" style="fill:#181818"></rect>
-<text transform="translate(1587,400)" font-size="599" style="fill:#d8d8d8">page</text>
-<text transform="translate(1,490)" font-size="543" style="fill:#c9d1d4">cloud</text>
-<text transform="translate(2632,698)" font-size="375" style="fill:#c9d1d4">wrote</text>
-<text transform="translate(433,692)" font-size="259" style="fill:#c9d1d4">python</text>
-<text transform="translate(3118,367)" font-size="237" style="fill:#b9cad1">site</text>
-<text transform="translate(1586,712)" font-size="213" style="fill:#aac3cd">content</text>
-<text transform="translate(861,160)" font-size="209" style="fill:#aac3cd">word</text>
-<text transform="translate(31,631)" font-size="209" style="fill:#aac3cd">way</text>
-<text transform="translate(3169,151)" font-size="197" style="fill:#aac3cd">list</text>
-<text transform="translate(1748,522)" font-size="169" style="fill:#aac3cd">text</text>
-<text transform="translate(2,775)" font-size="124" style="fill:#aac3cd">worked</text>
-<text transform="translate(635,381) rotate(-90)" font-size="108" style="fill:#9bbdc9">quick</text>
-<text transform="translate(766,777)" font-size="108" style="fill:#9bbdc9">website</text>
-<text transform="translate(9,108)" font-size="108" style="fill:#9bbdc9">terms</text>
-<text transform="translate(2964,461)" font-size="108" style="fill:#9bbdc9">create</text>
-<text transform="translate(2463,779)" font-size="106" style="fill:#9bbdc9">rendered</text>
-<text transform="translate(179,359)" font-size="106" style="fill:#9bbdc9">html</text>
-<text transform="translate(3419,462)" font-size="106" style="fill:#9bbdc9">words</text>
-<text transform="translate(3094,389) rotate(-90)" font-size="106" style="fill:#9bbdc9">simple</text>
-<text transform="translate(1213,760)" font-size="90" style="fill:#9bbdc9">desktop</text>
-<text transform="translate(3100,765)" font-size="81" style="fill:#9bbdc9">community</text>
-<text transform="translate(1746,778)" font-size="81" style="fill:#9bbdc9">android</text>
-<text transform="translate(2315,375) rotate(-90)" font-size="81" style="fill:#9bbdc9">college</text>
-<text transform="translate(1349,539)" font-size="81" style="fill:#9bbdc9">armw</text>
-<text transform="translate(2662,464)" font-size="76" style="fill:#9bbdc9">jquery</text>
-<text transform="translate(2114,768)" font-size="63" style="fill:#8bb6c6">portfolio</text>
-<text transform="translate(300,418)" font-size="63" style="fill:#8bb6c6">well</text>
-<text transform="translate(1545,56)" font-size="63" style="fill:#8bb6c6">find</text>
-<text transform="translate(657,81)" font-size="63" style="fill:#8bb6c6">posts</text>
-<text transform="translate(28,160)" font-size="63" style="fill:#8bb6c6">updated</text>
-<text transform="translate(1368,593)" font-size="63" style="fill:#8bb6c6">think</text>
-<text transform="translate(3522,201)" font-size="63" style="fill:#8bb6c6">pretty</text>
-<text transform="translate(1780,59)" font-size="63" style="fill:#8bb6c6">summarize</text>
-<text transform="translate(1313,517) rotate(-90)" font-size="63" style="fill:#8bb6c6">important</text>
-<text transform="translate(3052,768) rotate(-90)" font-size="63" style="fill:#8bb6c6">really</text>
-<text transform="translate(1427,192) rotate(-90)" font-size="63" style="fill:#8bb6c6">home</text>
-<text transform="translate(2173,570) rotate(-90)" font-size="63" style="fill:#8bb6c6">one</text>
-<text transform="translate(1374,648)" font-size="63" style="fill:#8bb6c6">pages</text>
-<text transform="translate(2831,299)" font-size="63" style="fill:#8bb6c6">ssg</text>
-<text transform="translate(2546,49)" font-size="63" style="fill:#8bb6c6">function</text>
-<text transform="translate(3596,113)" font-size="63" style="fill:#8bb6c6">used</text>
-<text transform="translate(1143,436) rotate(-90)" font-size="63" style="fill:#8bb6c6">summary</text>
-<text transform="translate(2490,645)" font-size="63" style="fill:#8bb6c6">svg</text>
-<text transform="translate(644,163)" font-size="63" style="fill:#8bb6c6">image</text>
-<text transform="translate(1764,575)" font-size="63" style="fill:#8bb6c6">mobile</text>
-<text transform="translate(1923,186)" font-size="63" style="fill:#8bb6c6">user</text>
-<text transform="translate(352,49)" font-size="63" style="fill:#8bb6c6">thing</text>
-<text transform="translate(1003,537) rotate(-90)" font-size="63" style="fill:#8bb6c6">different</text>
-<text transform="translate(352,211)" font-size="63" style="fill:#8bb6c6">js</text>
-<text transform="translate(2683,396) rotate(-90)" font-size="63" style="fill:#8bb6c6">flutter</text>
-<text transform="translate(1468,129) rotate(-90)" font-size="63" style="fill:#8bb6c6">app</text>
-<text transform="translate(2181,481)" font-size="63" style="fill:#8bb6c6">post</text>
-<text transform="translate(476,537)" font-size="62" style="fill:#8bb6c6">service</text>
-<text transform="translate(2323,44)" font-size="62" style="fill:#8bb6c6">events</text>
-<text transform="translate(2174,558)" font-size="62" style="fill:#8bb6c6">axes</text>
-<text transform="translate(789,415) rotate(-90)" font-size="62" style="fill:#8bb6c6">game</text>
-<text transform="translate(53,38)" font-size="49" style="fill:#8bb6c6">brochstein</text>
-<text transform="translate(2462,582)" font-size="49" style="fill:#8bb6c6">rice</text>
-<text transform="translate(1019,532)" font-size="49" style="fill:#8bb6c6">windows</text>
-<text transform="translate(3099,82)" font-size="49" style="fill:#8bb6c6">java</text>
-<text transform="translate(3427,599)" font-size="49" style="fill:#8bb6c6">vue</text>
-<text transform="translate(3,679)" font-size="43" style="fill:#8bb6c6">wordpress</text>
-<text transform="translate(2465,704)" font-size="43" style="fill:#8bb6c6">student</text>
-<text transform="translate(3537,778)" font-size="43" style="fill:#8bb6c6">computer</text>
-<text transform="translate(1191,359) rotate(-90)" font-size="43" style="fill:#8bb6c6">university</text>
-<text transform="translate(2402,447)" font-size="43" style="fill:#8bb6c6">things</text>
-<text transform="translate(1695,283)" font-size="43" style="fill:#8bb6c6">enjoy</text>
-<text transform="translate(1407,396)" font-size="43" style="fill:#8bb6c6">flag</text>
-<text transform="translate(442,791)" font-size="43" style="fill:#8bb6c6">indents</text>
-<text transform="translate(635,197)" font-size="43" style="fill:#8bb6c6">amd</text>
-<text transform="translate(3122,166)" font-size="32" style="fill:#7cafc2">got</text>
-<text transform="translate(2242,515)" font-size="32" style="fill:#7cafc2">feel</text>
-<text transform="translate(1000,26)" font-size="32" style="fill:#7cafc2">free</text>
-<text transform="translate(3418,191)" font-size="32" style="fill:#7cafc2">check</text>
-<text transform="translate(3369,20)" font-size="32" style="fill:#7cafc2">resume</text>
-<text transform="translate(1493,359) rotate(-90)" font-size="32" style="fill:#7cafc2">online</text>
-<text transform="translate(1098,26)" font-size="32" style="fill:#7cafc2">pieman2201</text>
-<text transform="translate(687,112)" font-size="32" style="fill:#7cafc2">overview</text>
-<text transform="translate(699,27)" font-size="32" style="fill:#7cafc2">written</text>
-<text transform="translate(3505,492)" font-size="32" style="fill:#7cafc2">made</text>
-<text transform="translate(1756,186)" font-size="32" style="fill:#7cafc2">aug</text>
-<text transform="translate(294,269)" font-size="32" style="fill:#7cafc2">haxcon</text>
-<text transform="translate(734,673)" font-size="32" style="fill:#7cafc2">jul</text>
-<text transform="translate(1591,763)" font-size="32" style="fill:#7cafc2">clouds</text>
-<text transform="translate(3099,229)" font-size="32" style="fill:#7cafc2">reasonable</text>
-<text transform="translate(3537,726)" font-size="32" style="fill:#7cafc2">graphically</text>
-<text transform="translate(2846,51)" font-size="32" style="fill:#7cafc2">properly</text>
-<text transform="translate(1954,429) rotate(-90)" font-size="32" style="fill:#7cafc2">implemented</text>
-<text transform="translate(151,411)" font-size="32" style="fill:#7cafc2">provide</text>
-<text transform="translate(683,748)" font-size="32" style="fill:#7cafc2">easy</text>
-<text transform="translate(860,32)" font-size="32" style="fill:#7cafc2">discern</text>
-<text transform="translate(27,499) rotate(-90)" font-size="32" style="fill:#7cafc2">significant</text>
-<text transform="translate(3425,632)" font-size="32" style="fill:#7cafc2">source</text>
-<text transform="translate(528,409)" font-size="32" style="fill:#7cafc2">anything</text>
-<text transform="translate(1389,788)" font-size="32" style="fill:#7cafc2">feature</text>
-<text transform="translate(2487,311)" font-size="32" style="fill:#7cafc2">seemed</text>
-<text transform="translate(2618,266) rotate(-90)" font-size="32" style="fill:#7cafc2">apt</text>
-<text transform="translate(1581,565)" font-size="32" style="fill:#7cafc2">encompass</text>
-<text transform="translate(3372,346) rotate(-90)" font-size="32" style="fill:#7cafc2">personal</text>
-<text transform="translate(541,359) rotate(-90)" font-size="32" style="fill:#7cafc2">without</text>
-<text transform="translate(2885,704) rotate(-90)" font-size="32" style="fill:#7cafc2">duplicating</text>
-<text transform="translate(3198,790)" font-size="32" style="fill:#7cafc2">information</text>
-<text transform="translate(3294,391)" font-size="32" style="fill:#7cafc2">available</text>
-<text transform="translate(3247,491)" font-size="32" style="fill:#7cafc2">needed</text>
-<text transform="translate(2132,56)" font-size="32" style="fill:#7cafc2">obtain</text>
-<text transform="translate(3212,169)" font-size="32" style="fill:#7cafc2">every</text>
-<text transform="translate(2039,564)" font-size="32" style="fill:#7cafc2">parts</text>
-<text transform="translate(1617,365) rotate(-90)" font-size="32" style="fill:#7cafc2">programmatically</text>
-<text transform="translate(944,191)" font-size="32" style="fill:#7cafc2">files</text>
-<text transform="translate(3567,229)" font-size="32" style="fill:#7cafc2">created</text>
-<text transform="translate(2147,423)" font-size="32" style="fill:#7cafc2">outputs</text>
-<text transform="translate(2232,585)" font-size="32" style="fill:#7cafc2">isolated</text>
-<text transform="translate(3453,558)" font-size="32" style="fill:#7cafc2">areas</text>
-<text transform="translate(2344,388) rotate(-90)" font-size="32" style="fill:#7cafc2">beautifulsoup</text>
-<text transform="translate(3704,379) rotate(-90)" font-size="32" style="fill:#7cafc2">refine</text>
-<text transform="translate(3441,659)" font-size="32" style="fill:#7cafc2">nltk</text>
-<text transform="translate(370,640)" font-size="32" style="fill:#7cafc2">stop</text>
-<text transform="translate(339,132)" font-size="32" style="fill:#7cafc2">remove</text>
-<text transform="translate(452,363) rotate(-90)" font-size="32" style="fill:#7cafc2">particularly</text>
-<text transform="translate(634,777)" font-size="32" style="fill:#7cafc2">purpose</text>
-<text transform="translate(1691,230)" font-size="32" style="fill:#7cafc2">creating</text>
-<text transform="translate(3689,630)" font-size="32" style="fill:#7cafc2">etc</text>
-<text transform="translate(820,596)" font-size="32" style="fill:#7cafc2">time</text>
-<text transform="translate(3594,25)" font-size="32" style="fill:#7cafc2">actually</text>
-<text transform="translate(3083,769) rotate(-90)" font-size="32" style="fill:#7cafc2">thankfully</text>
-<text transform="translate(1879,100)" font-size="32" style="fill:#7cafc2">theres</text>
-<text transform="translate(109,186)" font-size="32" style="fill:#7cafc2">wordcloud</text>
-<text transform="translate(307,444)" font-size="32" style="fill:#7cafc2">module</text>
-<text transform="translate(816,357)" font-size="32" style="fill:#7cafc2">turn</text>
-<text transform="translate(2049,306)" font-size="32" style="fill:#7cafc2">string</text>
-<text transform="translate(2813,170)" font-size="32" style="fill:#7cafc2">color</text>
-<text transform="translate(539,29)" font-size="32" style="fill:#7cafc2">gradient</text>
-<text transform="translate(2053,185)" font-size="32" style="fill:#7cafc2">d8d8d8</text>
-<text transform="translate(3267,695)" font-size="32" style="fill:#7cafc2">7cafc2</text>
-<text transform="translate(3270,127) rotate(-90)" font-size="32" style="fill:#7cafc2">passed</text>
-<text transform="translate(612,469)" font-size="32" style="fill:#7cafc2">along</text>
-<text transform="translate(3397,330) rotate(-90)" font-size="32" style="fill:#7cafc2">generator</text>
-<text transform="translate(1890,132)" font-size="32" style="fill:#7cafc2">first</text>
-<text transform="translate(1433,688)" font-size="32" style="fill:#7cafc2">tested</text>
-<text transform="translate(1440,147)" font-size="32" style="fill:#7cafc2">setup</text>
-<text transform="translate(3742,380) rotate(-90)" font-size="32" style="fill:#7cafc2">expected</text>
-<text transform="translate(1714,527) rotate(-90)" font-size="32" style="fill:#7cafc2">showed</text>
-<text transform="translate(2435,162)" font-size="32" style="fill:#7cafc2">great</text>
-<text transform="translate(3660,149)" font-size="32" style="fill:#7cafc2">look</text>
-<text transform="translate(537,716)" font-size="32" style="fill:#7cafc2">short</text>
-<text transform="translate(3238,319)" font-size="32" style="fill:#7cafc2">yet</text>
-<text transform="translate(3304,588)" font-size="32" style="fill:#7cafc2">big</text>
-<text transform="translate(2642,74)" font-size="32" style="fill:#7cafc2">enough</text>
-<text transform="translate(3178,197)" font-size="32" style="fill:#7cafc2">need</text>
-<text transform="translate(3012,792)" font-size="32" style="fill:#7cafc2">scroll</text>
-<text transform="translate(267,637)" font-size="32" style="fill:#7cafc2">see</text>
-<text transform="translate(2222,25)" font-size="32" style="fill:#7cafc2">whole</text>
-<text transform="translate(2994,792) rotate(-90)" font-size="32" style="fill:#7cafc2">accommodate</text>
-<text transform="translate(2419,192)" font-size="32" style="fill:#7cafc2">screen</text>
-<text transform="translate(2806,337)" font-size="32" style="fill:#7cafc2">sizes</text>
-<text transform="translate(1577,787)" font-size="32" style="fill:#7cafc2">decided</text>
-<text transform="translate(2997,383) rotate(-90)" font-size="32" style="fill:#7cafc2">render</text>
-<text transform="translate(1231,533)" font-size="32" style="fill:#7cafc2">aspect</text>
-<text transform="translate(2425,482)" font-size="32" style="fill:#7cafc2">ratios</text>
-<text transform="translate(2,211)" font-size="32" style="fill:#7cafc2">load</text>
-<text transform="translate(2083,341)" font-size="32" style="fill:#7cafc2">fit</text>
-<text transform="translate(797,314)" font-size="32" style="fill:#7cafc2">best</text>
-<text transform="translate(3124,386) rotate(-90)" font-size="32" style="fill:#7cafc2">although</text>
-<text transform="translate(3163,629)" font-size="32" style="fill:#7cafc2">much</text>
-<text transform="translate(1631,661)" font-size="32" style="fill:#7cafc2">note</text>
-<text transform="translate(1226,783)" font-size="32" style="fill:#7cafc2">common</text>
-<text transform="translate(1613,514) rotate(-90)" font-size="32" style="fill:#7cafc2">example</text>
-<text transform="translate(31,492)" font-size="32" style="fill:#7cafc2">fun</text>
-<text transform="translate(2051,644)" font-size="32" style="fill:#7cafc2">add</text>
-<text transform="translate(3492,395)" font-size="32" style="fill:#7cafc2">looks</text>
-<text transform="translate(1692,53)" font-size="32" style="fill:#7cafc2">cool</text>
-<text transform="translate(2466,336)" font-size="32" style="fill:#7cafc2">welcome</text>
-<text transform="translate(498,750)" font-size="32" style="fill:#7cafc2">talk</text>
-<text transform="translate(1923,211)" font-size="32" style="fill:#7cafc2">future</text>
-<text transform="translate(2641,669) rotate(-90)" font-size="32" style="fill:#7cafc2">web</text>
-<text transform="translate(2202,787)" font-size="24" style="fill:#7cafc2">development</text>
-<text transform="translate(111,336)" font-size="24" style="fill:#7cafc2">today</text>
-<text transform="translate(2968,480)" font-size="24" style="fill:#7cafc2">discussing</text>
-<text transform="translate(1376,162) rotate(-90)" font-size="24" style="fill:#7cafc2">javascript</text>
-<text transform="translate(1996,715) rotate(-90)" font-size="24" style="fill:#7cafc2">rule</text>
-<text transform="translate(3136,37)" font-size="24" style="fill:#7cafc2">world</text>
-<text transform="translate(3120,480)" font-size="24" style="fill:#7cafc2">projects</text>
-<text transform="translate(1056,652) rotate(-90)" font-size="24" style="fill:#7cafc2">arranged</text>
-<text transform="translate(2769,189)" font-size="24" style="fill:#7cafc2">particular</text>
-<text transform="translate(970,710)" font-size="24" style="fill:#7cafc2">order</text>
-<text transform="translate(2323,58)" font-size="24" style="fill:#7cafc2">serveup</text>
-<text transform="translate(3637,649)" font-size="24" style="fill:#7cafc2">students</text>
-<text transform="translate(299,182)" font-size="24" style="fill:#7cafc2">sign</text>
-<text transform="translate(3370,121)" font-size="24" style="fill:#7cafc2">within</text>
-<text transform="translate(1093,340) rotate(-90)" font-size="24" style="fill:#7cafc2">organization</text>
-<text transform="translate(1875,402)" font-size="24" style="fill:#7cafc2">high</text>
-<text transform="translate(3148,594)" font-size="24" style="fill:#7cafc2">school</text>
-<text transform="translate(3639,70)" font-size="24" style="fill:#7cafc2">office</text>
-<text transform="translate(819,545)" font-size="24" style="fill:#7cafc2">arcade</text>
-<text transform="translate(2618,207) rotate(-90)" font-size="24" style="fill:#7cafc2">player</text>
-<text transform="translate(3094,118)" font-size="24" style="fill:#7cafc2">targets</text>
-<text transform="translate(2753,484)" font-size="24" style="fill:#7cafc2">falling</text>
-<text transform="translate(283,504)" font-size="24" style="fill:#7cafc2">blocks</text>
-<text transform="translate(1218,706) rotate(-90)" font-size="24" style="fill:#7cafc2">manipulating</text>
-<text transform="translate(3596,483)" font-size="24" style="fill:#7cafc2">crosshair</text>
-<text transform="translate(2937,83)" font-size="24" style="fill:#7cafc2">showcasing</text>
-<text transform="translate(106,379)" font-size="24" style="fill:#7cafc2">architectural</text>
-<text transform="translate(2365,789)" font-size="24" style="fill:#7cafc2">merits</text>
-<text transform="translate(685,699)" font-size="24" style="fill:#7cafc2">pavilion</text>
-<text transform="translate(1725,313)" font-size="24" style="fill:#7cafc2">project</text>
-<text transform="translate(2855,19)" font-size="24" style="fill:#7cafc2">architecture</text>
-<text transform="translate(2075,590)" font-size="24" style="fill:#7cafc2">class</text>
-<text transform="translate(1886,645)" font-size="24" style="fill:#7cafc2">toy</text>
-<text transform="translate(2539,603)" font-size="24" style="fill:#7cafc2">window</text>
-<text transform="translate(1435,176)" font-size="24" style="fill:#7cafc2">manager</text>
-<text transform="translate(3267,515)" font-size="24" style="fill:#7cafc2">x11</text>
-<text transform="translate(3124,388)" font-size="24" style="fill:#7cafc2">randomly</text>
-<text transform="translate(2637,102)" font-size="24" style="fill:#7cafc2">manages</text>
-<text transform="translate(521,434)" font-size="22" style="fill:#7cafc2">generalissimo</text>
-<text transform="translate(1578,584)" font-size="22" style="fill:#7cafc2">client</text>
-<text transform="translate(3747,541) rotate(-90)" font-size="22" style="fill:#7cafc2">webdiplomacy</text>
-<text transform="translate(3506,533)" font-size="22" style="fill:#7cafc2">net</text>
-<text transform="translate(139,268)" font-size="22" style="fill:#7cafc2">dedicated</text>
-<text transform="translate(1958,420)" font-size="22" style="fill:#7cafc2">hosting</text>
-<text transform="translate(3227,285)" font-size="22" style="fill:#7cafc2">popular</text>
-<text transform="translate(3298,123) rotate(-90)" font-size="22" style="fill:#7cafc2">strategy</text>
-<text transform="translate(804,182)" font-size="22" style="fill:#7cafc2">diplomacy</text>
-<text transform="translate(597,672)" font-size="22" style="fill:#7cafc2">org</text>
-<text transform="translate(3539,363) rotate(-90)" font-size="22" style="fill:#7cafc2">wikipedia</text>
-<text transform="translate(2688,384)" font-size="22" style="fill:#7cafc2">esque</text>
-<text transform="translate(380,602)" font-size="22" style="fill:#7cafc2">index</text>
-<text transform="translate(2431,218)" font-size="22" style="fill:#7cafc2">theatre</text>
-<text transform="translate(292,149)" font-size="22" style="fill:#7cafc2">philosophy</text>
-<text transform="translate(387,508)" font-size="22" style="fill:#7cafc2">topics</text>
-<text transform="translate(2436,62)" font-size="22" style="fill:#7cafc2">compiled</text>
-<text transform="translate(391,68)" font-size="22" style="fill:#7cafc2">academic</text>
-<text transform="translate(171,793)" font-size="22" style="fill:#7cafc2">researchers</text>
-<text transform="translate(517,198)" font-size="22" style="fill:#7cafc2">part</text>
-<text transform="translate(1702,19)" font-size="22" style="fill:#7cafc2">webdev</text>
-<text transform="translate(2986,187)" font-size="22" style="fill:#7cafc2">job</text>
-<text transform="translate(3315,544)" font-size="22" style="fill:#7cafc2">ut</text>
-<text transform="translate(3348,435)" font-size="22" style="fill:#7cafc2">log</text>
-<text transform="translate(284,290)" font-size="22" style="fill:#7cafc2">script</text>
-<text transform="translate(1453,344) rotate(-90)" font-size="22" style="fill:#7cafc2">analyze</text>
-<text transform="translate(3247,342)" font-size="22" style="fill:#7cafc2">video</text>
-<text transform="translate(3315,650)" font-size="22" style="fill:#7cafc2">logs</text>
-<text transform="translate(848,375)" font-size="22" style="fill:#7cafc2">lab</text>
-<text transform="translate(115,697)" font-size="22" style="fill:#7cafc2">equipment</text>
-<text transform="translate(825,612)" font-size="22" style="fill:#7cafc2">extract</text>
-<text transform="translate(1784,17)" font-size="22" style="fill:#7cafc2">measurement</text>
-<text transform="translate(1906,729) rotate(-90)" font-size="22" style="fill:#7cafc2">values</text>
-<text transform="translate(792,268)" font-size="22" style="fill:#7cafc2">using</text>
-<text transform="translate(1643,684)" font-size="22" style="fill:#7cafc2">vision</text>
-<text transform="translate(2083,138)" font-size="22" style="fill:#7cafc2">opencv</text>
-<text transform="translate(827,659)" font-size="22" style="fill:#7cafc2">help</text>
-<text transform="translate(648,496)" font-size="22" style="fill:#7cafc2">duties</text>
-<text transform="translate(3310,715)" font-size="22" style="fill:#7cafc2">intern</text>
-<text transform="translate(3595,335)" font-size="22" style="fill:#7cafc2">fannin</text>
-<text transform="translate(27,793)" font-size="22" style="fill:#7cafc2">innovation</text>
-<text transform="translate(303,246)" font-size="22" style="fill:#7cafc2">studio</text>
-<text transform="translate(259,701)" font-size="22" style="fill:#7cafc2">wankel</text>
-<text transform="translate(3475,37)" font-size="22" style="fill:#7cafc2">social</text>
-<text transform="translate(1716,156)" font-size="22" style="fill:#7cafc2">platform</text>
-<text transform="translate(35,697)" font-size="22" style="fill:#7cafc2">based</text>
-<text transform="translate(1194,185)" font-size="22" style="fill:#7cafc2">around</text>
-<text transform="translate(1657,732)" font-size="22" style="fill:#7cafc2">central</text>
-<text transform="translate(742,794)" font-size="22" style="fill:#7cafc2">timeline</text>
-<text transform="translate(2690,556) rotate(-90)" font-size="22" style="fill:#7cafc2">users</text>
-<text transform="translate(2440,663)" font-size="22" style="fill:#7cafc2">completed</text>
-<text transform="translate(125,508)" font-size="22" style="fill:#7cafc2">sass</text>
-<text transform="translate(2316,75)" font-size="22" style="fill:#7cafc2">served</text>
-<text transform="translate(829,417)" font-size="22" style="fill:#7cafc2">via</text>
-<text transform="translate(286,475)" font-size="22" style="fill:#7cafc2">github</text>
-<text transform="translate(165,430)" font-size="22" style="fill:#7cafc2">operate</text>
-<text transform="translate(2081,18)" font-size="22" style="fill:#7cafc2">collection</text>
-<text transform="translate(3002,275)" font-size="22" style="fill:#7cafc2">jinja2</text>
-<text transform="translate(1281,709) rotate(-90)" font-size="22" style="fill:#7cafc2">templates</text>
-<text transform="translate(2146,584)" font-size="22" style="fill:#7cafc2">styled</text>
-<text transform="translate(111,647)" font-size="18" style="fill:#7cafc2">responsiveness</text>
-<text transform="translate(1126,705)" font-size="18" style="fill:#7cafc2">across</text>
-<text transform="translate(3503,696)" font-size="18" style="fill:#7cafc2">browsers</text>
-<text transform="translate(318,786)" font-size="18" style="fill:#7cafc2">programmer</text>
-<text transform="translate(2788,291)" font-size="18" style="fill:#7cafc2">tech</text>
-<text transform="translate(2716,795)" font-size="18" style="fill:#7cafc2">enthusiast</text>
-<text transform="translate(2250,392)" font-size="18" style="fill:#7cafc2">arch</text>
-<text transform="translate(726,610)" font-size="18" style="fill:#7cafc2">linux</text>
-<text transform="translate(2714,712)" font-size="18" style="fill:#7cafc2">vexillologist</text>
-<text transform="translate(1869,591)" font-size="18" style="fill:#7cafc2">novice</text>
-<text transform="translate(1678,587)" font-size="18" style="fill:#7cafc2">cook</text>
-<text transform="translate(2978,393)" font-size="18" style="fill:#7cafc2">proprietor</text>
-<text transform="translate(3289,612)" font-size="18" style="fill:#7cafc2">language</text>
-<text transform="translate(3481,83)" font-size="18" style="fill:#7cafc2">choice</text>
-<text transform="translate(577,49)" font-size="18" style="fill:#7cafc2">versed</text>
-<text transform="translate(987,691) rotate(-90)" font-size="18" style="fill:#7cafc2">especially</text>
-<text transform="translate(2993,135)" font-size="18" style="fill:#7cafc2">apps</text>
-<text transform="translate(1001,791)" font-size="18" style="fill:#7cafc2">experience</text>
-<text transform="translate(3257,423)" font-size="18" style="fill:#7cafc2">css</text>
-<text transform="translate(2463,794)" font-size="18" style="fill:#7cafc2">materialize</text>
-<text transform="translate(417,529)" font-size="18" style="fill:#7cafc2">php</text>
-<text transform="translate(354,665)" font-size="18" style="fill:#7cafc2">freshman</text>
-<text transform="translate(1198,148)" font-size="18" style="fill:#7cafc2">year</text>
-<text transform="translate(1764,729)" font-size="18" style="fill:#7cafc2">attended</text>
-<text transform="translate(286,591) rotate(-90)" font-size="18" style="fill:#7cafc2">texas</text>
-<text transform="translate(18,510)" font-size="18" style="fill:#7cafc2">austin</text>
-<text transform="translate(1480,703)" font-size="18" style="fill:#7cafc2">transferred</text>
-<text transform="translate(1470,24)" font-size="18" style="fill:#7cafc2">houston</text>
-<text transform="translate(2471,413)" font-size="18" style="fill:#7cafc2">pursuing</text>
-<text transform="translate(1442,432)" font-size="18" style="fill:#7cafc2">major</text>
-<text transform="translate(1344,278) rotate(-90)" font-size="18" style="fill:#7cafc2">science</text>
-<text transform="translate(1133,120) rotate(-90)" font-size="18" style="fill:#7cafc2">minor</text>
-<text transform="translate(1797,795)" font-size="18" style="fill:#7cafc2">financial</text>
-<text transform="translate(1920,74)" font-size="18" style="fill:#7cafc2">computation</text>
-<text transform="translate(2087,270)" font-size="18" style="fill:#7cafc2">modeling</text>
-<text transform="translate(3195,644)" font-size="18" style="fill:#7cafc2">vim</text>
-<text transform="translate(1515,71)" font-size="18" style="fill:#7cafc2">albania</text>
-<text transform="translate(1313,493)" font-size="18" style="fill:#7cafc2">i3wm</text>
-<text transform="translate(2045,200)" font-size="18" style="fill:#7cafc2">breaking</text>
-<text transform="translate(395,574)" font-size="18" style="fill:#7cafc2">bad</text>
-<text transform="translate(2193,70)" font-size="18" style="fill:#7cafc2">playing</text>
-<text transform="translate(589,352)" font-size="18" style="fill:#7cafc2">cat</text>
-<text transform="translate(2415,640)" font-size="18" style="fill:#7cafc2">phantom</text>
-<text transform="translate(1723,245)" font-size="18" style="fill:#7cafc2">tollbooth</text>
-<text transform="translate(3051,548)" font-size="18" style="fill:#7cafc2">sudo</text>
-<text transform="translate(299,203)" font-size="18" style="fill:#7cafc2">pacman</text>
-<text transform="translate(2650,114)" font-size="18" style="fill:#7cafc2">syu</text>
-<text transform="translate(1577,535)" font-size="18" style="fill:#7cafc2">space</text>
-<text transform="translate(23,650)" font-size="18" style="fill:#7cafc2">rocket</text>
-<text transform="translate(650,211)" font-size="18" style="fill:#7cafc2">league</text>
-<text transform="translate(1977,400) rotate(-90)" font-size="18" style="fill:#7cafc2">constraintlayout</text>
-<text transform="translate(1175,93)" font-size="18" style="fill:#7cafc2">base16</text>
-<text transform="translate(3536,749)" font-size="18" style="fill:#7cafc2">colorscheme</text>
-<text transform="translate(844,627)" font-size="18" style="fill:#7cafc2">ryzen</text>
-<text transform="translate(2544,65)" font-size="18" style="fill:#7cafc2">eclipse</text>
-<text transform="translate(185,509)" font-size="18" style="fill:#7cafc2">zambia</text>
-<text transform="translate(3422,350) rotate(-90)" font-size="18" style="fill:#7cafc2">macos</text>
-<text transform="translate(1431,607)" font-size="18" style="fill:#7cafc2">environment</text>
-<text transform="translate(3611,549)" font-size="18" style="fill:#7cafc2">update</text>
-<text transform="translate(1974,730)" font-size="18" style="fill:#7cafc2">tab</text>
-<text transform="translate(804,393)" font-size="18" style="fill:#7cafc2">comcast</text>
-<text transform="translate(1825,419)" font-size="18" style="fill:#7cafc2">pointer</text>
-<text transform="translate(1969,793)" font-size="18" style="fill:#7cafc2">acceleration</text>
-<text transform="translate(3626,621)" font-size="18" style="fill:#7cafc2">light</text>
-<text transform="translate(3518,792)" font-size="18" style="fill:#7cafc2">themes</text>
-<text transform="translate(3379,39)" font-size="18" style="fill:#7cafc2">radeon</text>
+<text transform="translate(412,368)" font-size="609" style="fill:#d8d8d8">page</text>
+<text transform="translate(1835,455)" font-size="534" style="fill:#d8d8d8">python</text>
+<text transform="translate(2516,733)" font-size="359" style="fill:#c9d1d4">cloud</text>
+<text transform="translate(814,720)" font-size="302" style="fill:#c9d1d4">wrote</text>
+<text transform="translate(82,733)" font-size="277" style="fill:#b9cad1">site</text>
+<text transform="translate(1703,731)" font-size="200" style="fill:#aac3cd">content</text>
+<text transform="translate(262,540) rotate(-90)" font-size="200" style="fill:#aac3cd">word</text>
+<text transform="translate(515,468)" font-size="164" style="fill:#aac3cd">way</text>
+<text transform="translate(399,473) rotate(-90)" font-size="164" style="fill:#aac3cd">list</text>
+<text transform="translate(3081,117)" font-size="164" style="fill:#aac3cd">text</text>
+<text transform="translate(1979,128)" font-size="164" style="fill:#aac3cd">worked</text>
+<text transform="translate(1474,476)" font-size="133" style="fill:#9bbdc9">quick</text>
+<text transform="translate(774,534)" font-size="96" style="fill:#9bbdc9">website</text>
+<text transform="translate(3468,74)" font-size="96" style="fill:#9bbdc9">terms</text>
+<text transform="translate(121,498) rotate(-90)" font-size="96" style="fill:#9bbdc9">create</text>
+<text transform="translate(3641,776) rotate(-90)" font-size="96" style="fill:#9bbdc9">rendered</text>
+<text transform="translate(1924,545)" font-size="96" style="fill:#9bbdc9">html</text>
+<text transform="translate(1162,296) rotate(-90)" font-size="96" style="fill:#9bbdc9">words</text>
+<text transform="translate(2516,572) rotate(-90)" font-size="96" style="fill:#9bbdc9">simple</text>
+<text transform="translate(806,430)" font-size="72" style="fill:#9bbdc9">desktop</text>
+<text transform="translate(2801,407) rotate(-90)" font-size="72" style="fill:#9bbdc9">community</text>
+<text transform="translate(3145,522)" font-size="72" style="fill:#9bbdc9">android</text>
+<text transform="translate(3701,769) rotate(-90)" font-size="72" style="fill:#9bbdc9">college</text>
+<text transform="translate(1642,520)" font-size="72" style="fill:#9bbdc9">armw</text>
+<text transform="translate(3466,131)" font-size="72" style="fill:#9bbdc9">jquery</text>
+<text transform="translate(1142,770)" font-size="60" style="fill:#8bb6c6">portfolio</text>
+<text transform="translate(2673,641)" font-size="60" style="fill:#8bb6c6">well</text>
+<text transform="translate(198,782)" font-size="60" style="fill:#8bb6c6">find</text>
+<text transform="translate(535,534)" font-size="60" style="fill:#8bb6c6">posts</text>
+<text transform="translate(865,769)" font-size="60" style="fill:#8bb6c6">updated</text>
+<text transform="translate(824,155)" font-size="60" style="fill:#8bb6c6">think</text>
+<text transform="translate(2889,496)" font-size="60" style="fill:#8bb6c6">pretty</text>
+<text transform="translate(516,786)" font-size="60" style="fill:#8bb6c6">summarize</text>
+<text transform="translate(788,354) rotate(-90)" font-size="60" style="fill:#8bb6c6">important</text>
+<text transform="translate(2524,508)" font-size="60" style="fill:#8bb6c6">really</text>
+<text transform="translate(2701,781)" font-size="60" style="fill:#8bb6c6">home</text>
+<text transform="translate(889,274)" font-size="60" style="fill:#8bb6c6">one</text>
+<text transform="translate(2903,114)" font-size="60" style="fill:#8bb6c6">pages</text>
+<text transform="translate(35,798) rotate(-90)" font-size="60" style="fill:#8bb6c6">ssg</text>
+<text transform="translate(3174,785)" font-size="60" style="fill:#8bb6c6">function</text>
+<text transform="translate(1666,272)" font-size="60" style="fill:#8bb6c6">used</text>
+<text transform="translate(83,34)" font-size="60" style="fill:#8bb6c6">summary</text>
+<text transform="translate(1434,247)" font-size="60" style="fill:#8bb6c6">svg</text>
+<text transform="translate(2570,53)" font-size="60" style="fill:#8bb6c6">image</text>
+<text transform="translate(1527,786)" font-size="60" style="fill:#8bb6c6">mobile</text>
+<text transform="translate(1,555)" font-size="60" style="fill:#8bb6c6">user</text>
+<text transform="translate(2908,50)" font-size="60" style="fill:#8bb6c6">thing</text>
+<text transform="translate(1933,780)" font-size="60" style="fill:#8bb6c6">different</text>
+<text transform="translate(3568,266)" font-size="60" style="fill:#8bb6c6">js</text>
+<text transform="translate(2171,455) rotate(-90)" font-size="60" style="fill:#8bb6c6">flutter</text>
+<text transform="translate(539,217)" font-size="60" style="fill:#8bb6c6">app</text>
+<text transform="translate(1827,53)" font-size="60" style="fill:#8bb6c6">post</text>
+<text transform="translate(2299,785)" font-size="60" style="fill:#8bb6c6">service</text>
+<text transform="translate(2907,781)" font-size="60" style="fill:#8bb6c6">events</text>
+<text transform="translate(1768,772)" font-size="60" style="fill:#8bb6c6">axes</text>
+<text transform="translate(1704,580)" font-size="60" style="fill:#8bb6c6">game</text>
+<text transform="translate(266,494)" font-size="60" style="fill:#8bb6c6">users</text>
+<text transform="translate(1281,295)" font-size="45" style="fill:#8bb6c6">brochstein</text>
+<text transform="translate(2941,696) rotate(-90)" font-size="45" style="fill:#8bb6c6">rice</text>
+<text transform="translate(2617,680)" font-size="45" style="fill:#8bb6c6">windows</text>
+<text transform="translate(2583,774)" font-size="45" style="fill:#8bb6c6">java</text>
+<text transform="translate(362,56)" font-size="45" style="fill:#8bb6c6">vue</text>
+<text transform="translate(3116,377) rotate(-90)" font-size="45" style="fill:#8bb6c6">wordpress</text>
+<text transform="translate(1960,582)" font-size="45" style="fill:#8bb6c6">student</text>
+<text transform="translate(32,223) rotate(-90)" font-size="45" style="fill:#8bb6c6">computer</text>
+<text transform="translate(3447,401) rotate(-90)" font-size="45" style="fill:#8bb6c6">university</text>
+<text transform="translate(1243,409)" font-size="45" style="fill:#8bb6c6">things</text>
+<text transform="translate(1833,114)" font-size="45" style="fill:#8bb6c6">enjoy</text>
+<text transform="translate(2144,480)" font-size="45" style="fill:#8bb6c6">flag</text>
+<text transform="translate(2265,611)" font-size="45" style="fill:#8bb6c6">indents</text>
+<text transform="translate(2703,572)" font-size="45" style="fill:#8bb6c6">amd</text>
+<text transform="translate(765,733)" font-size="34" style="fill:#7cafc2">got</text>
+<text transform="translate(386,542)" font-size="34" style="fill:#7cafc2">feel</text>
+<text transform="translate(3239,356)" font-size="34" style="fill:#7cafc2">free</text>
+<text transform="translate(922,474)" font-size="34" style="fill:#7cafc2">check</text>
+<text transform="translate(2176,152)" font-size="34" style="fill:#7cafc2">resume</text>
+<text transform="translate(1063,686)" font-size="34" style="fill:#7cafc2">online</text>
+<text transform="translate(3142,147)" font-size="34" style="fill:#7cafc2">pieman2201</text>
+<text transform="translate(1249,28)" font-size="34" style="fill:#7cafc2">overview</text>
+<text transform="translate(651,693)" font-size="34" style="fill:#7cafc2">written</text>
+<text transform="translate(1463,639)" font-size="34" style="fill:#7cafc2">made</text>
+<text transform="translate(3388,432)" font-size="34" style="fill:#7cafc2">aug</text>
+<text transform="translate(1210,544)" font-size="34" style="fill:#7cafc2">haxcon</text>
+<text transform="translate(3561,394) rotate(-90)" font-size="34" style="fill:#7cafc2">jul</text>
+<text transform="translate(3523,790)" font-size="34" style="fill:#7cafc2">clouds</text>
+<text transform="translate(1420,29)" font-size="34" style="fill:#7cafc2">reasonable</text>
+<text transform="translate(547,564)" font-size="34" style="fill:#7cafc2">graphically</text>
+<text transform="translate(1452,539)" font-size="34" style="fill:#7cafc2">properly</text>
+<text transform="translate(2982,434) rotate(-90)" font-size="34" style="fill:#7cafc2">implemented</text>
+<text transform="translate(2239,178)" font-size="34" style="fill:#7cafc2">provide</text>
+<text transform="translate(1464,335)" font-size="34" style="fill:#7cafc2">easy</text>
+<text transform="translate(825,28)" font-size="34" style="fill:#7cafc2">discern</text>
+<text transform="translate(48,514) rotate(-90)" font-size="34" style="fill:#7cafc2">significant</text>
+<text transform="translate(192,639)" font-size="34" style="fill:#7cafc2">source</text>
+<text transform="translate(340,781)" font-size="34" style="fill:#7cafc2">anything</text>
+<text transform="translate(529,171)" font-size="34" style="fill:#7cafc2">feature</text>
+<text transform="translate(70,779)" font-size="34" style="fill:#7cafc2">seemed</text>
+<text transform="translate(245,181)" font-size="34" style="fill:#7cafc2">apt</text>
+<text transform="translate(128,559)" font-size="34" style="fill:#7cafc2">encompass</text>
+<text transform="translate(2934,435) rotate(-90)" font-size="34" style="fill:#7cafc2">personal</text>
+<text transform="translate(235,300)" font-size="34" style="fill:#7cafc2">without</text>
+<text transform="translate(434,357) rotate(-90)" font-size="34" style="fill:#7cafc2">duplicating</text>
+<text transform="translate(67,64)" font-size="34" style="fill:#7cafc2">information</text>
+<text transform="translate(1855,612)" font-size="34" style="fill:#7cafc2">available</text>
+<text transform="translate(1932,326)" font-size="34" style="fill:#7cafc2">needed</text>
+<text transform="translate(1541,170) rotate(-90)" font-size="34" style="fill:#7cafc2">obtain</text>
+<text transform="translate(2347,544)" font-size="34" style="fill:#7cafc2">every</text>
+<text transform="translate(4,599)" font-size="34" style="fill:#7cafc2">parts</text>
+<text transform="translate(3744,739) rotate(-90)" font-size="34" style="fill:#7cafc2">programmatically</text>
+<text transform="translate(184,242)" font-size="34" style="fill:#7cafc2">files</text>
+<text transform="translate(480,28)" font-size="34" style="fill:#7cafc2">created</text>
+<text transform="translate(3204,305)" font-size="34" style="fill:#7cafc2">outputs</text>
+<text transform="translate(1477,391)" font-size="34" style="fill:#7cafc2">isolated</text>
+<text transform="translate(2940,518)" font-size="34" style="fill:#7cafc2">areas</text>
+<text transform="translate(3743,392) rotate(-90)" font-size="34" style="fill:#7cafc2">beautifulsoup</text>
+<text transform="translate(2136,520)" font-size="34" style="fill:#7cafc2">refine</text>
+<text transform="translate(1648,161)" font-size="34" style="fill:#7cafc2">nltk</text>
+<text transform="translate(2728,382) rotate(-90)" font-size="34" style="fill:#7cafc2">stop</text>
+<text transform="translate(3539,302)" font-size="34" style="fill:#7cafc2">remove</text>
+<text transform="translate(2309,24)" font-size="30" style="fill:#7cafc2">particularly</text>
+<text transform="translate(2164,17)" font-size="30" style="fill:#7cafc2">purpose</text>
+<text transform="translate(2006,24)" font-size="30" style="fill:#7cafc2">creating</text>
+<text transform="translate(2126,610)" font-size="30" style="fill:#7cafc2">etc</text>
+<text transform="translate(503,684)" font-size="30" style="fill:#7cafc2">time</text>
+<text transform="translate(523,262)" font-size="30" style="fill:#7cafc2">actually</text>
+<text transform="translate(2398,153)" font-size="30" style="fill:#7cafc2">thankfully</text>
+<text transform="translate(1086,715)" font-size="30" style="fill:#7cafc2">theres</text>
+<text transform="translate(2920,152)" font-size="30" style="fill:#7cafc2">wordcloud</text>
+<text transform="translate(3230,268)" font-size="30" style="fill:#7cafc2">module</text>
+<text transform="translate(2374,406)" font-size="30" style="fill:#7cafc2">turn</text>
+<text transform="translate(1942,262)" font-size="30" style="fill:#7cafc2">string</text>
+<text transform="translate(1943,154)" font-size="30" style="fill:#7cafc2">color</text>
+<text transform="translate(1655,296)" font-size="30" style="fill:#7cafc2">gradient</text>
+<text transform="translate(2636,106)" font-size="30" style="fill:#7cafc2">d8d8d8</text>
+<text transform="translate(1071,622)" font-size="30" style="fill:#7cafc2">7cafc2</text>
+<text transform="translate(2865,565)" font-size="30" style="fill:#7cafc2">passed</text>
+<text transform="translate(2631,270)" font-size="30" style="fill:#7cafc2">along</text>
+<text transform="translate(294,78)" font-size="30" style="fill:#7cafc2">generator</text>
+<text transform="translate(1264,168)" font-size="30" style="fill:#7cafc2">first</text>
+<text transform="translate(1089,335)" font-size="30" style="fill:#7cafc2">tested</text>
+<text transform="translate(1242,434)" font-size="30" style="fill:#7cafc2">setup</text>
+<text transform="translate(3013,397) rotate(-90)" font-size="30" style="fill:#7cafc2">expected</text>
+<text transform="translate(1076,649)" font-size="30" style="fill:#7cafc2">showed</text>
+<text transform="translate(295,388)" font-size="30" style="fill:#7cafc2">great</text>
+<text transform="translate(2663,246)" font-size="30" style="fill:#7cafc2">look</text>
+<text transform="translate(351,665)" font-size="30" style="fill:#7cafc2">short</text>
+<text transform="translate(1308,126)" font-size="30" style="fill:#7cafc2">yet</text>
+<text transform="translate(2172,432)" font-size="30" style="fill:#7cafc2">big</text>
+<text transform="translate(2258,214)" font-size="30" style="fill:#7cafc2">enough</text>
+<text transform="translate(59,686)" font-size="30" style="fill:#7cafc2">need</text>
+<text transform="translate(886,305)" font-size="30" style="fill:#7cafc2">scroll</text>
+<text transform="translate(3157,462)" font-size="30" style="fill:#7cafc2">see</text>
+<text transform="translate(1505,213) rotate(-90)" font-size="30" style="fill:#7cafc2">whole</text>
+<text transform="translate(935,793)" font-size="30" style="fill:#7cafc2">accommodate</text>
+<text transform="translate(141,518) rotate(-90)" font-size="30" style="fill:#7cafc2">screen</text>
+<text transform="translate(1626,27)" font-size="30" style="fill:#7cafc2">sizes</text>
+<text transform="translate(2897,74)" font-size="30" style="fill:#7cafc2">decided</text>
+<text transform="translate(146,368) rotate(-90)" font-size="30" style="fill:#7cafc2">render</text>
+<text transform="translate(2055,151)" font-size="30" style="fill:#7cafc2">aspect</text>
+<text transform="translate(1740,606)" font-size="30" style="fill:#7cafc2">ratios</text>
+<text transform="translate(800,180)" font-size="30" style="fill:#7cafc2">load</text>
+<text transform="translate(3361,143)" font-size="30" style="fill:#7cafc2">fit</text>
+<text transform="translate(2359,467)" font-size="30" style="fill:#7cafc2">best</text>
+<text transform="translate(3278,698) rotate(-90)" font-size="30" style="fill:#7cafc2">although</text>
+<text transform="translate(386,688)" font-size="30" style="fill:#7cafc2">much</text>
+<text transform="translate(3034,642)" font-size="30" style="fill:#7cafc2">note</text>
+<text transform="translate(357,624)" font-size="30" style="fill:#7cafc2">common</text>
+<text transform="translate(2633,152)" font-size="30" style="fill:#7cafc2">example</text>
+<text transform="translate(3,278)" font-size="30" style="fill:#7cafc2">fun</text>
+<text transform="translate(551,300)" font-size="30" style="fill:#7cafc2">add</text>
+<text transform="translate(3440,659)" font-size="30" style="fill:#7cafc2">looks</text>
+<text transform="translate(3120,731)" font-size="30" style="fill:#7cafc2">cool</text>
+<text transform="translate(1859,300) rotate(-90)" font-size="30" style="fill:#7cafc2">welcome</text>
+<text transform="translate(822,454)" font-size="30" style="fill:#7cafc2">talk</text>
+<text transform="translate(1934,353)" font-size="30" style="fill:#7cafc2">future</text>
+<text transform="translate(1350,687)" font-size="30" style="fill:#7cafc2">web</text>
+<text transform="translate(2565,443) rotate(-90)" font-size="30" style="fill:#7cafc2">development</text>
+<text transform="translate(547,120)" font-size="30" style="fill:#7cafc2">today</text>
+<text transform="translate(3381,711) rotate(-90)" font-size="30" style="fill:#7cafc2">discussing</text>
+<text transform="translate(3132,554) rotate(-90)" font-size="30" style="fill:#7cafc2">javascript</text>
+<text transform="translate(754,656)" font-size="30" style="fill:#7cafc2">rule</text>
+<text transform="translate(40,117)" font-size="30" style="fill:#7cafc2">world</text>
+<text transform="translate(1020,684) rotate(-90)" font-size="30" style="fill:#7cafc2">projects</text>
+<text transform="translate(2195,404) rotate(-90)" font-size="30" style="fill:#7cafc2">arranged</text>
+<text transform="translate(3170,706) rotate(-90)" font-size="30" style="fill:#7cafc2">particular</text>
+<text transform="translate(1963,382)" font-size="30" style="fill:#7cafc2">order</text>
+<text transform="translate(805,131) rotate(-90)" font-size="30" style="fill:#7cafc2">serveup</text>
+<text transform="translate(1370,663) rotate(-90)" font-size="30" style="fill:#7cafc2">students</text>
+<text transform="translate(3498,532) rotate(-90)" font-size="30" style="fill:#7cafc2">sign</text>
+<text transform="translate(528,491)" font-size="30" style="fill:#7cafc2">within</text>
+<text transform="translate(621,22)" font-size="23" style="fill:#7cafc2">organization</text>
+<text transform="translate(392,565)" font-size="23" style="fill:#7cafc2">high</text>
+<text transform="translate(726,615)" font-size="23" style="fill:#7cafc2">school</text>
+<text transform="translate(3010,679)" font-size="23" style="fill:#7cafc2">office</text>
+<text transform="translate(1545,502)" font-size="23" style="fill:#7cafc2">arcade</text>
+<text transform="translate(2734,505)" font-size="23" style="fill:#7cafc2">player</text>
+<text transform="translate(1718,20)" font-size="23" style="fill:#7cafc2">targets</text>
+<text transform="translate(1616,669)" font-size="23" style="fill:#7cafc2">falling</text>
+<text transform="translate(3235,385)" font-size="23" style="fill:#7cafc2">blocks</text>
+<text transform="translate(3467,494) rotate(-90)" font-size="23" style="fill:#7cafc2">manipulating</text>
+<text transform="translate(968,20)" font-size="23" style="fill:#7cafc2">crosshair</text>
+<text transform="translate(1386,793)" font-size="23" style="fill:#7cafc2">aliasbot</text>
+<text transform="translate(1951,288)" font-size="23" style="fill:#7cafc2">telegram</text>
+<text transform="translate(204,205)" font-size="23" style="fill:#7cafc2">bot</text>
+<text transform="translate(2890,689) rotate(-90)" font-size="23" style="fill:#7cafc2">enabling</text>
+<text transform="translate(3440,99) rotate(-90)" font-size="23" style="fill:#7cafc2">save</text>
+<text transform="translate(1113,360)" font-size="23" style="fill:#7cafc2">notes</text>
+<text transform="translate(1513,740)" font-size="23" style="fill:#7cafc2">links</text>
+<text transform="translate(2641,397)" font-size="23" style="fill:#7cafc2">recalled</text>
+<text transform="translate(225,706)" font-size="23" style="fill:#7cafc2">custom</text>
+<text transform="translate(2344,504)" font-size="23" style="fill:#7cafc2">keyword</text>
+<text transform="translate(1167,793)" font-size="23" style="fill:#7cafc2">commands</text>
+<text transform="translate(695,367)" font-size="23" style="fill:#7cafc2">showcasing</text>
+<text transform="translate(1678,538)" font-size="23" style="fill:#7cafc2">architectural</text>
+<text transform="translate(224,667)" font-size="23" style="fill:#7cafc2">merits</text>
+<text transform="translate(2623,595)" font-size="23" style="fill:#7cafc2">pavilion</text>
+<text transform="translate(2329,564)" font-size="23" style="fill:#7cafc2">project</text>
+<text transform="translate(3141,20)" font-size="23" style="fill:#7cafc2">architecture</text>
+<text transform="translate(1753,700)" font-size="23" style="fill:#7cafc2">class</text>
+<text transform="translate(2659,341)" font-size="23" style="fill:#7cafc2">toy</text>
+<text transform="translate(2366,440)" font-size="23" style="fill:#7cafc2">window</text>
+<text transform="translate(14,649)" font-size="23" style="fill:#7cafc2">manager</text>
+<text transform="translate(3125,176)" font-size="23" style="fill:#7cafc2">x11</text>
+<text transform="translate(3559,151)" font-size="23" style="fill:#7cafc2">randomly</text>
+<text transform="translate(2890,446)" font-size="23" style="fill:#7cafc2">manages</text>
+<text transform="translate(2823,238) rotate(-90)" font-size="23" style="fill:#7cafc2">generalissimo</text>
+<text transform="translate(3105,125) rotate(-90)" font-size="23" style="fill:#7cafc2">client</text>
+<text transform="translate(1184,292) rotate(-90)" font-size="23" style="fill:#7cafc2">webdiplomacy</text>
+<text transform="translate(1893,694) rotate(-90)" font-size="23" style="fill:#7cafc2">net</text>
+<text transform="translate(2553,528)" font-size="23" style="fill:#7cafc2">dedicated</text>
+<text transform="translate(1650,123)" font-size="23" style="fill:#7cafc2">hosting</text>
+<text transform="translate(11,617)" font-size="23" style="fill:#7cafc2">popular</text>
+<text transform="translate(347,19)" font-size="23" style="fill:#7cafc2">strategy</text>
+<text transform="translate(2826,416) rotate(-90)" font-size="23" style="fill:#7cafc2">diplomacy</text>
+<text transform="translate(2463,194)" font-size="23" style="fill:#7cafc2">org</text>
+<text transform="translate(3465,287) rotate(-90)" font-size="23" style="fill:#7cafc2">wikipedia</text>
+<text transform="translate(2198,605)" font-size="23" style="fill:#7cafc2">esque</text>
+<text transform="translate(2267,260)" font-size="23" style="fill:#7cafc2">index</text>
+<text transform="translate(2712,698)" font-size="23" style="fill:#7cafc2">theatre</text>
+<text transform="translate(3303,664) rotate(-90)" font-size="23" style="fill:#7cafc2">philosophy</text>
+<text transform="translate(2821,26)" font-size="23" style="fill:#7cafc2">topics</text>
+<text transform="translate(1134,478) rotate(-90)" font-size="23" style="fill:#7cafc2">compiled</text>
+<text transform="translate(263,514)" font-size="23" style="fill:#7cafc2">academic</text>
+<text transform="translate(1785,793)" font-size="23" style="fill:#7cafc2">researchers</text>
+<text transform="translate(220,593)" font-size="23" style="fill:#7cafc2">part</text>
+<text transform="translate(1712,392)" font-size="23" style="fill:#7cafc2">webdev</text>
+<text transform="translate(1482,677)" font-size="23" style="fill:#7cafc2">job</text>
+<text transform="translate(130,167)" font-size="23" style="fill:#7cafc2">ut</text>
+<text transform="translate(2342,699)" font-size="23" style="fill:#7cafc2">log</text>
+<text transform="translate(1223,641)" font-size="23" style="fill:#7cafc2">script</text>
+<text transform="translate(3653,786)" font-size="23" style="fill:#7cafc2">analyze</text>
+<text transform="translate(1278,191)" font-size="23" style="fill:#7cafc2">video</text>
+<text transform="translate(2130,664)" font-size="23" style="fill:#7cafc2">logs</text>
+<text transform="translate(724,531)" font-size="23" style="fill:#7cafc2">lab</text>
+<text transform="translate(1457,207) rotate(-90)" font-size="23" style="fill:#7cafc2">equipment</text>
+<text transform="translate(365,706)" font-size="23" style="fill:#7cafc2">extract</text>
+<text transform="translate(2860,535)" font-size="23" style="fill:#7cafc2">measurement</text>
+<text transform="translate(1846,162)" font-size="23" style="fill:#7cafc2">values</text>
+<text transform="translate(2105,178)" font-size="23" style="fill:#7cafc2">using</text>
+<text transform="translate(1749,665)" font-size="23" style="fill:#7cafc2">vision</text>
+<text transform="translate(44,135)" font-size="23" style="fill:#7cafc2">opencv</text>
+<text transform="translate(2104,196)" font-size="23" style="fill:#7cafc2">help</text>
+<text transform="translate(511,632)" font-size="23" style="fill:#7cafc2">duties</text>
+<text transform="translate(2609,792)" font-size="23" style="fill:#7cafc2">intern</text>
+<text transform="translate(2534,467)" font-size="23" style="fill:#7cafc2">fannin</text>
+<text transform="translate(1838,72)" font-size="23" style="fill:#7cafc2">innovation</text>
+<text transform="translate(2575,74)" font-size="23" style="fill:#7cafc2">studio</text>
+<text transform="translate(2734,530)" font-size="23" style="fill:#7cafc2">wankel</text>
+<text transform="translate(779,474)" font-size="23" style="fill:#7cafc2">social</text>
+<text transform="translate(1445,599)" font-size="23" style="fill:#7cafc2">platform</text>
+<text transform="translate(1180,39)" font-size="23" style="fill:#7cafc2">based</text>
+<text transform="translate(3336,165)" font-size="23" style="fill:#7cafc2">around</text>
+<text transform="translate(2535,309) rotate(-90)" font-size="23" style="fill:#7cafc2">central</text>
+<text transform="translate(2432,581)" font-size="23" style="fill:#7cafc2">timeline</text>
+<text transform="translate(3243,662) rotate(-90)" font-size="23" style="fill:#7cafc2">completed</text>
+<text transform="translate(3,569)" font-size="23" style="fill:#7cafc2">sass</text>
+<text transform="translate(2011,483)" font-size="23" style="fill:#7cafc2">served</text>
+<text transform="translate(2252,450) rotate(-90)" font-size="23" style="fill:#7cafc2">via</text>
+<text transform="translate(3441,613)" font-size="23" style="fill:#7cafc2">github</text>
+<text transform="translate(287,448)" font-size="23" style="fill:#7cafc2">operate</text>
+<text transform="translate(37,754)" font-size="23" style="fill:#7cafc2">collection</text>
+<text transform="translate(348,589)" font-size="23" style="fill:#7cafc2">jinja2</text>
+<text transform="translate(3460,753)" font-size="21" style="fill:#7cafc2">templates</text>
+<text transform="translate(3329,17)" font-size="21" style="fill:#7cafc2">styled</text>
+<text transform="translate(814,549)" font-size="18" style="fill:#7cafc2">responsiveness</text>
+<text transform="translate(90,397)" font-size="18" style="fill:#7cafc2">across</text>
+<text transform="translate(2349,745)" font-size="18" style="fill:#7cafc2">browsers</text>
+<text transform="translate(103,569)" font-size="18" style="fill:#7cafc2">programmer</text>
+<text transform="translate(2097,465)" font-size="18" style="fill:#7cafc2">tech</text>
+<text transform="translate(3577,17)" font-size="18" style="fill:#7cafc2">enthusiast</text>
+<text transform="translate(2134,695)" font-size="18" style="fill:#7cafc2">arch</text>
+<text transform="translate(247,212)" font-size="18" style="fill:#7cafc2">linux</text>
+<text transform="translate(1610,230)" font-size="18" style="fill:#7cafc2">vexillologist</text>
+<text transform="translate(2770,455)" font-size="18" style="fill:#7cafc2">novice</text>
+<text transform="translate(1820,400)" font-size="18" style="fill:#7cafc2">cook</text>
+<text transform="translate(2640,292)" font-size="18" style="fill:#7cafc2">proprietor</text>
+<text transform="translate(717,586)" font-size="18" style="fill:#7cafc2">language</text>
+<text transform="translate(3225,234)" font-size="18" style="fill:#7cafc2">choice</text>
+<text transform="translate(337,176)" font-size="18" style="fill:#7cafc2">versed</text>
+<text transform="translate(1276,787)" font-size="18" style="fill:#7cafc2">especially</text>
+<text transform="translate(326,108)" font-size="18" style="fill:#7cafc2">apps</text>
+<text transform="translate(2631,120)" font-size="18" style="fill:#7cafc2">experience</text>
+<text transform="translate(2240,112)" font-size="18" style="fill:#7cafc2">css</text>
+<text transform="translate(3134,477)" font-size="18" style="fill:#7cafc2">materialize</text>
+<text transform="translate(385,640)" font-size="18" style="fill:#7cafc2">php</text>
+<text transform="translate(78,795)" font-size="18" style="fill:#7cafc2">freshman</text>
+<text transform="translate(925,105)" font-size="18" style="fill:#7cafc2">year</text>
+<text transform="translate(2069,670) rotate(-90)" font-size="18" style="fill:#7cafc2">attended</text>
+<text transform="translate(49,243) rotate(-90)" font-size="18" style="fill:#7cafc2">texas</text>
+<text transform="translate(2742,588)" font-size="18" style="fill:#7cafc2">austin</text>
+<text transform="translate(1113,730)" font-size="18" style="fill:#7cafc2">transferred</text>
+<text transform="translate(3214,91)" font-size="18" style="fill:#7cafc2">houston</text>
+<text transform="translate(497,649)" font-size="18" style="fill:#7cafc2">pursuing</text>
+<text transform="translate(3143,96) rotate(-90)" font-size="18" style="fill:#7cafc2">major</text>
+<text transform="translate(124,183)" font-size="18" style="fill:#7cafc2">science</text>
+<text transform="translate(51,59) rotate(-90)" font-size="18" style="fill:#7cafc2">minor</text>
+<text transform="translate(1967,794)" font-size="18" style="fill:#7cafc2">financial</text>
+<text transform="translate(448,271) rotate(-90)" font-size="18" style="fill:#7cafc2">computation</text>
+<text transform="translate(2304,143)" font-size="18" style="fill:#7cafc2">modeling</text>
+<text transform="translate(2608,622)" font-size="18" style="fill:#7cafc2">vim</text>
+<text transform="translate(1541,46)" font-size="18" style="fill:#7cafc2">albania</text>
+<text transform="translate(2939,738)" font-size="18" style="fill:#7cafc2">i3wm</text>
+<text transform="translate(2432,733) rotate(-90)" font-size="18" style="fill:#7cafc2">breaking</text>
+<text transform="translate(1376,432)" font-size="18" style="fill:#7cafc2">bad</text>
+<text transform="translate(523,704)" font-size="18" style="fill:#7cafc2">playing</text>
+<text transform="translate(1192,240)" font-size="18" style="fill:#7cafc2">cat</text>
+<text transform="translate(1442,504)" font-size="18" style="fill:#7cafc2">phantom</text>
+<text transform="translate(248,410)" font-size="18" style="fill:#7cafc2">tollbooth</text>
+<text transform="translate(180,293)" font-size="18" style="fill:#7cafc2">sudo</text>
+<text transform="translate(3600,434)" font-size="18" style="fill:#7cafc2">pacman</text>
+<text transform="translate(2292,316)" font-size="18" style="fill:#7cafc2">syu</text>
+<text transform="translate(3164,158)" font-size="18" style="fill:#7cafc2">space</text>
+<text transform="translate(2284,285)" font-size="18" style="fill:#7cafc2">rocket</text>
+<text transform="translate(2434,350) rotate(-90)" font-size="18" style="fill:#7cafc2">league</text>
+<text transform="translate(1100,284) rotate(-90)" font-size="18" style="fill:#7cafc2">constraintlayout</text>
+<text transform="translate(2903,378) rotate(-90)" font-size="18" style="fill:#7cafc2">base16</text>
+<text transform="translate(2083,795)" font-size="18" style="fill:#7cafc2">colorscheme</text>
+<text transform="translate(1543,347)" font-size="18" style="fill:#7cafc2">ryzen</text>
+<text transform="translate(1230,661)" font-size="18" style="fill:#7cafc2">eclipse</text>
+<text transform="translate(419,744)" font-size="18" style="fill:#7cafc2">zambia</text>
+<text transform="translate(2498,163)" font-size="18" style="fill:#7cafc2">macos</text>
+<text transform="translate(1079,550)" font-size="18" style="fill:#7cafc2">environment</text>
+<text transform="translate(2583,640)" font-size="18" style="fill:#7cafc2">update</text>
+<text transform="translate(2069,597)" font-size="18" style="fill:#7cafc2">tab</text>
+<text transform="translate(3024,612)" font-size="18" style="fill:#7cafc2">comcast</text>
+<text transform="translate(1673,313)" font-size="18" style="fill:#7cafc2">pointer</text>
+<text transform="translate(1434,310)" font-size="18" style="fill:#7cafc2">acceleration</text>
+<text transform="translate(2259,233)" font-size="18" style="fill:#7cafc2">light</text>
+<text transform="translate(663,37)" font-size="18" style="fill:#7cafc2">themes</text>
+<text transform="translate(2771,429)" font-size="18" style="fill:#7cafc2">radeon</text>
 </svg>

@@ -187,6 +187,7 @@ def create_svg_from_tallies(tallies):
     for r in range(1, 50):
         ratio = r / 10
         width = int(height * ratio)
+#        print(width, height, ratio)
         wordcloud = WordCloud(
                 width = width, height = height,
                 color_func = lambda word, *args, **kwargs: Color(rgb=gradient[tallies[word] - 1]),

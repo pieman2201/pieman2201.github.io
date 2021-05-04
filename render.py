@@ -48,6 +48,20 @@ COLOR_MAP = {
             ]
         }
 
+CLOUD_RATIOS = [
+        *list((x + 1) / 10 for x in range(0, 20)),
+        2.5,
+        3.0,
+        3.5,
+        4.0,
+        5.0,
+        6.0,
+        7.5,
+        9.0
+        ]
+
+MAX_CLOUD_PX = 800 * 800
+
 act_cm = {k: v for d in [{val: key for val in vals} for key, vals in COLOR_MAP.items()] for k, v in d.items()}
 punct  = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ '
 
@@ -141,7 +155,9 @@ def load(template):
     template = env.get_template(template)
     return template
 
-load('home.html').stream().dump('docs/index.html')
+load('home.html').stream(
+        ratios = CLOUD_RATIOS
+        ).dump('docs/index.html')
 load('about.html').stream(
         color_function = color_about
         ).dump('docs/about/index.html')
@@ -183,11 +199,11 @@ def create_svg_from_tallies(tallies):
     start_color = Color("#7cafc2")
     stop_color  = Color("#d8d8d8")
     gradient = get_color_gradient(start_color, stop_color, max_tally)
-    height = 800
-    for r in range(1, 50):
-        ratio = r / 10
-        width = int(height * ratio)
-#        print(width, height, ratio)
+    for ratio in CLOUD_RATIOS:
+        height = (MAX_CLOUD_PX / ratio) ** 0.5
+        width = height * ratio
+        width, height = int(width), int(height)
+        print(width, height, ratio)
         wordcloud = WordCloud(
                 width = width, height = height,
                 color_func = lambda word, *args, **kwargs: Color(rgb=gradient[tallies[word] - 1]),

@@ -8,13 +8,21 @@
 <p>I've got an <a href="/about">about</a> page and a <a href="/portfolio">portfolio</a>; feel free to check out my <a href="resume.pdf">resume</a> as well. You can also find me online as <a href="https://github.com/pieman2201"><span class="highlight">pieman2201</span></a>. Otherwise, here's a quick overview of the content on this website:</p>
 <img id="cloud" alt="This is a word cloud showing what Ishan Kamat is interested in. Ishan is also known as pieman2201 online. Rice University is where Ishan Kamat studies Computer Science. Houston is Ishan's place of residence. Ishan enjoys coding, competitive programming, and technology in general. Arch Linux is his OS of choice. pieman2201 has projects on GitHub and GitLab.">
 <script>
+    var ratios = {{ ratios }};
+    function incrementRatio(ratio) {
+        return Math.floor(ratio * 10 + 1) / 10;
+    }
     function resizeCloud() {
         var height = window.innerHeight - $('#cloud')[0].offsetTop - parseInt($('#content-pane').css('padding-bottom'));
         var width  = $('#cloud')[0].width;
         var ratio = Math.floor(width / height);
         while (width / ratio > height) {
-            ratio += 0.1;
+            ratio = incrementRatio(ratio);
         }
+        while (!ratios.includes(ratio) && ratio <= Math.max(...ratios) && ratio >= Math.min(...ratios)) {
+            ratio = incrementRatio(ratio);
+        }
+        console.log(ratio);
         $('#cloud')[0].src = 'clouds/cloud-' + ratio.toFixed(1) + '.svg';
     }
 

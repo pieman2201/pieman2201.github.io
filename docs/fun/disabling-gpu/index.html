@@ -1,0 +1,151 @@
+<html prefix="og: http://ogp.me/ns#">
+    <!--
+ --------
+| Hello! |
+ --------
+      \   ^__^
+       \  (oo)\_______
+          (__)\       )\/\
+              ||----w |
+              ||     ||
+    -->
+    <head>
+
+        <meta property="og:site_name" content="Ishan Kamat" />
+        <meta property="og:image" content="http://ishankam.at/pfp.png" />
+
+        
+        
+        <meta property="og:description" content="I&#39;m compiling the list of..." />
+        
+
+        <meta name="description" content="Hi, I'm Ishan Kamat (pieman2201). I'm interested in software, technology, flags, and more. Take a look at my portfolio, resume, or bio."/>
+
+        <title>Disabling the dGPU on my XPS 15 9570 - Ishan Kamat</title>
+        <meta property="og:title" content="Disabling the dGPU on my XPS 15 9570" />
+
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="shortcut icon" href="/favicon.ico"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+        <script>
+            function setHeaderHeight() {
+                if ($('#nav-pane > img').css('display') === "none") {
+                    $('#content-header').css('height', 'auto');
+                } else {
+                    $('#content-header').height(
+                        $('#nav-pane').width()
+                    );
+                }
+            }
+
+            $(document).ready(function() {
+                setHeaderHeight();
+                $('#nav-pane > a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
+                            $(this).addClass('active');
+                            $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
+                            $(this).addClass('gone');
+                        }
+                    }
+                );
+            });
+
+            $(window).resize(function() {
+                setHeaderHeight();
+            });
+
+            function toggleMenu() {
+                var btn = $('#nav-toggle');
+                $('#nav-pane').removeClass('gone');
+                $('#content-pane').removeClass('gone');
+                if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
+                else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
+                $((btn.html() === 'menu') ? '#nav-pane' : '#content-pane').addClass('gone');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-toggle-container">
+            <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
+            <a id="nav-current-title"></a>
+        </div>
+        <div id="nav-pane" class="gone">
+            <img src="/pfp.png">
+            <a href="/">Home</a>
+            <a href="/about/">About</a>
+            <a href="/portfolio/">Portfolio</a>
+            <a href="/fun/">Fun</a>
+        </div>
+        <div id="content-pane">
+            <div id="content-header">
+                <h1>Disabling the dGPU on my XPS 15 9570</h1>
+            </div>
+            <div id="content-main">
+                
+
+<p>I'm compiling the list of steps I followed here, partly so that I remember what I did, and also so that anyone else encountering the same irritation might find this concise-ish solution.</p>
+
+<p>For some background, my XPS 15 has Intel graphics alongside an Nvidia GTX 1050 Ti mobile GPU. I don't do anything graphically demanding under Arch Linux, so I sought to disable the GPU for the sake of longer battery life. I tried the recommended solution on the Arch wiki, but unfortunately my GPU would turn on seemingly at random; the only thing I could do was run <code>systemctl suspend</code> and hope that the GPU would stay off upon resuming. This was clearly frustrating, so I decided to figure out a more effective solution.</p>
+
+<p>After a fair amount of searching, I ended up with a set of modifications as follows. I took most of this from a <a href="https://old.reddit.com/r/Dell/comments/d3dizj">helpful post on the Dell subreddit</a>.</p>
+
+<ol>
+<li>Install acpi_call (<code>yay -S acpi_call</code> or <code>acpi_call-lts</code>)</li>
+<li><p>Create a file <code>/etc/modules-load.d/acpi_call.conf</code> with the contents:</p>
+
+<pre><code>acpi_call
+</code></pre></li>
+<li><p>Create a file <code>/etc/modprobe.d/blacklist.conf</code> with the contents:</p>
+
+<pre><code>install nouveau /bin/true
+blacklist nouveau
+</code></pre></li>
+<li><p>Create a file <code>/etc/tmpfiles.d/acpi_call.conf</code> with the contents:</p>
+
+<pre><code>w /proc/acpi/call - - - - \\_SB.PCI0.PEG0.PEGP._OFF
+</code></pre></li>
+<li><p>Create a file <code>/etc/tmpfiles.d/remove_gpu.conf</code> with the contents:</p>
+
+<pre><code>w /sys/bus/pci/devices/0000\:01\:00.0/remove - - - - 1
+</code></pre></li>
+<li><p>Create a file <code>/etc/systemd/system/root-resume.service</code> with the contents:</p>
+
+<pre><code>[Unit]
+Description=Local system resume actions
+After=suspend.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sh -c "echo '\_SB.PCI0.PEG0.PEGP._OFF' &gt; /proc/acpi/call"
+
+[Install]
+WantedBy=suspend.target
+</code></pre></li>
+<li>Enable/start the service with <code>systemctl enable</code> and <code>systemctl start</code></li>
+<li>Install powertop (<code>yay -S powertop</code>)</li>
+<li>Run <code>powertop</code> while unplugged from the wall, and check the discharge rate (mine was ~12W at idle whenever my GPU was on)</li>
+<li>Reboot</li>
+<li>Run <code>powertop</code> again to observe significantly lower discharge rates (mine was ~5W at idle after disablingt the GPU)</li>
+</ol>
+
+<p>When the computer boots, the GPU is turned off through acpi_call (this also happens whenever the system resumes from sleep). Furthermore, on boot, the device is removed from the Linux's list of connected PCI devices; as a result, the device won't show up anymore in <code>lspci</code>. This part solved a problem I had where certain programs would somehow cause the GPU to awaken (e.g. Mathematica, Zoom).</p>
+
+<p>This fix has been very solid for me thus far, at least on the current LTS kernel (5.10.35). I use i8kutils for my fan control, and I'd often notice that my temperature thresholds would be ignored by the computer. I think this is because of a bug/feature in Dell's BIOS where the fan automatically kicks in when the dGPU is active; even with the dell-bios-fan-control utility, I couldn't override this behavior. Now, I haven't noticed my fans spinning unwantedly at all</p>
+
+            </div>
+        </div>
+    </body>
+</html>

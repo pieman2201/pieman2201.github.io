@@ -15,7 +15,7 @@ env = Environment(
         loader      = FileSystemLoader('templates'),
         autoescape  = select_autoescape(['html','xml'])
         )
-mkd = Markdown()
+mkd = Markdown(extras=['fenced-code-blocks'])
 
 COLOR_MAP = {
         'red':      [
@@ -63,7 +63,7 @@ CLOUD_RATIOS = [
 MAX_CLOUD_PX = 800 * 800
 
 act_cm = {k: v for d in [{val: key for val in vals} for key, vals in COLOR_MAP.items()] for k, v in d.items()}
-punct  = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ '
+punct  = '!"#$%&\'()*+-,./:;<=>?@[\\]^`{|}~ _'
 
 def color_about(text):
     terms = ['']

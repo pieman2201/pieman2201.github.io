@@ -11,6 +11,7 @@
     var ratios = {{ ratios }};
 </script>
 <script>
+    var curr_ratio = 0;
     function resizeCloud() {
         var height = window.innerHeight - $('#cloud')[0].offsetTop - parseInt($('#content-pane').css('padding-bottom'));
         var width  = $('#cloud')[0].width;
@@ -21,8 +22,11 @@
                 break;
             }
         }
-        $('#cloud')[0].src = 'clouds/cloud-' + ratio.toFixed(1) + '.svg';
-        $('#cloud').height(height);
+        if (ratio != curr_ratio) {
+            $('#cloud')[0].src = 'clouds/cloud-' + ratio.toFixed(1) + '.svg';
+            $('#cloud').height(height);
+            curr_ratio = ratio;
+        }
     }
 
     $(window).resize(resizeCloud);

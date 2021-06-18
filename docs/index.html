@@ -103,6 +103,7 @@
     var ratios = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0, 2.5, 3.0, 3.5, 4.0, 5.0, 6.0, 7.5, 9.0];
 </script>
 <script>
+    var curr_ratio = 0;
     function resizeCloud() {
         var height = window.innerHeight - $('#cloud')[0].offsetTop - parseInt($('#content-pane').css('padding-bottom'));
         var width  = $('#cloud')[0].width;
@@ -113,8 +114,11 @@
                 break;
             }
         }
-        $('#cloud')[0].src = 'clouds/cloud-' + ratio.toFixed(1) + '.svg';
-        $('#cloud').height(height);
+        if (ratio != curr_ratio) {
+            $('#cloud')[0].src = 'clouds/cloud-' + ratio.toFixed(1) + '.svg';
+            $('#cloud').height(height);
+            curr_ratio = ratio;
+        }
     }
 
     $(window).resize(resizeCloud);

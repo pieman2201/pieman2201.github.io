@@ -11,6 +11,7 @@ import re
 import os
 import shutil
 
+
 env = Environment(
         loader      = FileSystemLoader('templates'),
         autoescape  = select_autoescape(['html','xml'])
@@ -63,7 +64,7 @@ CLOUD_RATIOS = [
 MAX_CLOUD_PX = 800 * 800
 
 act_cm = {k: v for d in [{val: key for val in vals} for key, vals in COLOR_MAP.items()] for k, v in d.items()}
-punct  = '!"#$%&\'()*+-,./:;<=>?@[\\]^`{|}~ _'
+punct  = '!"#$%&\'()*+-,./:;<=>?@[\\]^`{|}~ _\n'
 
 def color_about(text):
     terms = ['']
@@ -168,6 +169,8 @@ load('fun.html').stream(
         posts = process_blog()
         ).dump('docs/fun/index.html')
 
+def remove_punct(word):
+    return ''.join(c for c in word if c not in punct)
 
 def get_word_tallies():
     tallies = {}
@@ -176,10 +179,17 @@ def get_word_tallies():
         with file.open() as f:
             soup = BeautifulSoup(f.read(), 'html.parser')
             content = soup.find(id = 'content-main')
-            text = ''.join([c if c not in punct + '\n' else ' ' for c in str(content.text)])
+
+            text = content.text
+            text = ' '.join(text.split('/'))
+            text = ' '.join(text.split('\n'))
+            text = ' '.join(text.split('\''))
+
             for term in text.split(' '):
-                if (len(term) > 2 or (len(term) == 2 and term.lower() != term)) and term.lower() not in stopwords.words('english'):
-                    tallies[term.lower()] = tallies.get(term.lower(), 0) + 1
+                n_term = remove_punct(term)
+                if (n_term in term) and (len(n_term) > 2 or (len(n_term) == 2 and n_term.lower() != n_term)):
+                    if n_term.lower() not in stopwords.words('english'):
+                        tallies[n_term.lower()] = tallies.get(n_term.lower(), 0) + 1
     # for key in tallies.keys():
     #     print(key)
     return tallies
@@ -194,11 +204,10 @@ def get_color_gradient(start, stop, steps):
     return colors
 
 def create_svg_from_tallies(tallies):
-    max_tally = max(tallies.values())
-    text = ''.join([(word + ' ') * tallies[word] for word in sorted(tallies.keys(), key = lambda x: tallies[x])])
+    text = ' '.join(sum([[word] * tallies[word] for word in tallies.keys()], start = []))
     start_color = Color("#7cafc2")
     stop_color  = Color("#d8d8d8")
-    gradient = get_color_gradient(start_color, stop_color, max_tally)
+    gradient = get_color_gradient(start_color, stop_color, max(tallies.values()))
     for ratio in CLOUD_RATIOS:
         height = (MAX_CLOUD_PX / ratio) ** 0.5
         width = height * ratio
@@ -212,7 +221,7 @@ def create_svg_from_tallies(tallies):
                 background_color = "#181818",
                 max_words = len(tallies.keys()),
                 random_state = random.Random(sum(tallies.values()))
-                ).generate(text)
+                ).generate_from_frequencies(tallies)
         with open('docs/clouds/cloud-%.1f.svg' % ratio, 'w') as f:
             f.write(wordcloud.to_svg(embed_font = True))
 

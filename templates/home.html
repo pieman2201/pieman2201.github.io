@@ -24,9 +24,9 @@
         }
         if (ratio != curr_ratio) {
             $('#cloud')[0].src = 'clouds/cloud-' + ratio.toFixed(1) + '.svg';
-            $('#cloud').height(height);
             curr_ratio = ratio;
         }
+        $('#cloud').height(height);
     }
 
     $(window).resize(resizeCloud);

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block c_header %}
+<h1>Roles I've had</h1>
+{% endblock %}
+
+{% block c_main %}
+
+{% macro experience(place, role, start, end, summary) -%}
+<li>
+    <div class="experience-item">
+        <div class="experience-item-header">
+            <div class="experience-item-company">
+                <p class="experience-item-place">{{ place | safe }}</p>
+                <p class="experience-item-role">{{ role | safe }}</p>
+            </div>
+            <div class="experience-item-dates">
+                <p class="experience-item-start">{{ start | safe }}</p>
+                {% if start != "" and end != "" %}
+                    <p class="experience-item-dates-sep">&nbsp;-&nbsp;</p>
+                {% endif %}
+                <p class="experience-item-end">{{ end | safe }}</p>
+            </div>
+        </div>
+        <p class="experience-item-summary">
+        {{ color_function(summary) | safe }}
+        </p>
+    </div>
+</li>
+{%- endmacro %}
+
+<div class="list non-bullet">
+    <ul>
+        {{ experience("<span class=\"blue\">Rice University</span>", "Teaching Assistant", "Fall 2022", "", "I'll be holding office hours and helping to grade for COMP 215, an introductory program design course.") }}
+        {{ experience("<span class=\"white\">Plaid</span>", "Software Engineering Intern", "Summer 2022", "", "I'll be working on the Transactions team in both Python and Go.") }}
+        {{ experience("<span class=\"green\">ServiceNow</span>", "Software Engineering Intern", "5/2021", "8/2021", "I worked on the Digital Portfolio Management team and helped implement necessary features for the 1.0 release of a plugin for the company platform. I primarily worked on the frontend with JS and CSS, and I also did some backend development in Java.") }}
+        {{ experience("<span class=\"blue\">IBM</span>", "Data Science Intern", "6/2020", "8/2020", "I built models using Python to analyze and quantify aspects of large public datasets, and I developed conclusions based on correlated trends.") }}
+        {{ experience("<span class=\"orange\">The University of Texas at Austin</span>", "Web Developer", "1/2020", "8/2020", "I designed and developed sites to host professors' research output with JS, CSS, and PHP on WordPress, and I built server maintenance tools using Python.") }}
+    </ul>
+</div>
+
+{% endblock %}

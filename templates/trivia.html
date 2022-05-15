@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block c_header %}
+<h1>Interests of mine</h1>
+{% endblock %}
+{% block c_main %}
+
+{% macro list(header, color, items) -%}
+<div class="list {{ color }}">
+    <p class="list-head">{{ header | safe }}</p>
+    <ul>
+        {% for item in items %}
+        <li><span class="foreground">{{ item | safe }}</span></li>
+        {% endfor %}
+    </ul>
+</div>
+{%- endmacro %}
+
+<p>Here are some lists of things that I find notable or that I particularly enjoy:</p>
+
+<div class="multiple-list-container">
+    {{ list("Pastimes", "blue", [
+    "vexillology",
+    "tinkering",
+    "video games",
+    "biking",
+    "geography",
+    "hanging out with friends",
+    "playing with my cat"
+    ]) }}
+    {{ list("Foods", "yellow", [
+    "sushi",
+    "Halal Guys",
+    "tacos",
+    "Sichuan cuisine",
+    "late-night ramen"
+    ]) }}
+    {{ list("Software", "green", [
+    "vim",
+    "Arch Linux",
+    "i3wm",
+    "Telegram"
+    ]) }}
+    {{ list("Games", "orange", [
+    "Kerbal Space Program",
+    "Europa Universalis 4",
+    "Rocket League",
+    "CS:GO",
+    "Luftrausers"
+    ]) }}
+    {{ list("Flags", "magenta", [
+    "Albania",
+    "Kyrgyztan",
+    "Montenegro"
+    ]) }}
+    {{ list("Classes", "red", [
+    "Computer Systems",
+    "Adv. Object-Oriented Programming",
+    "Parallel Programming",
+    "Student Venture Fund"
+    ]) }}
+    {{ list("Books", "cyan", [
+    "Dune",
+    "Anna Karenina",
+    "Ringworld",
+    "The Castle of Otranto"
+    ]) }}
+</div>
+{% endblock %}

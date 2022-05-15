@@ -168,15 +168,15 @@ body {
 #content-container #content-header h1 .highlight {
   display: inline-block;
 }
-#content-container p {
+#content-container #content-main {
+  padding-top: 0.5em;
+}
+#content-container #content-main p {
   margin-top: 0;
   margin-bottom: 1em;
 }
-#content-container p > img:first-child {
+#content-container #content-main p > img:first-child {
   margin-top: 0;
-}
-#content-container #content-main {
-  padding-top: 0.5em;
 }
 #content-container #content-main img {
   max-width: 480px;

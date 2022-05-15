@@ -2,11 +2,6 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markdown2 import Markdown
 from pathlib import Path
 from datetime import datetime
-from bs4 import BeautifulSoup
-from wordcloud import WordCloud
-from colour import Color
-from nltk.corpus import stopwords
-import random
 import re
 import os
 import shutil
@@ -14,7 +9,7 @@ import shutil
 
 env = Environment(
         loader      = FileSystemLoader('templates'),
-        autoescape  = select_autoescape(['html','xml'])
+        autoescape  = select_autoescape(['html','xml']),
         )
 mkd = Markdown(extras=['fenced-code-blocks'])
 
@@ -36,6 +31,7 @@ COLOR_MAP = {
         'cyan':     [
             'flutter',
             'jquery',
+            'go',
             ],
         'blue':     [
             'python',
@@ -49,20 +45,6 @@ COLOR_MAP = {
             ]
         }
 
-CLOUD_RATIOS = [
-        *list((x + 1) / 10 for x in range(0, 20)),
-        2.5,
-        3.0,
-        3.5,
-        4.0,
-        5.0,
-        6.0,
-        7.5,
-        9.0
-        ]
-
-MAX_CLOUD_PX = 800 * 800
-
 act_cm = {k: v for d in [{val: key for val in vals} for key, vals in COLOR_MAP.items()] for k, v in d.items()}
 punct  = '!"#$%&\'()*+-,./:;<=>?@[\\]^`{|}~ _\n'
 
@@ -73,6 +55,8 @@ def color_about(text):
             terms[-1] += char
         else:
             terms.append(char)
+            if char == "/":
+                terms.append('<wbr>')
             terms.append('')
     return ''.join([color_tech_term(term) for term in terms])
 
@@ -80,19 +64,9 @@ def color_tech_term(term):
     color = act_cm.get(term.lower(), '')
     return ('<span class="%s">%s</span>' % (color, term)) if len(color) else term
 
-def process_tech(tech):
-    tech_terms = tech.split('/')
-    return '/<wbr>'.join([color_tech_term(term) for term in tech_terms])
-
-def load_portfolio():
-    with open('sources/raw_portfolio') as raw:
-        content = raw.read()
-        items = content.split('\n=\n')
-        return [{
-            'name': item.split('\n')[0],
-            'tech': process_tech(item.split('\n')[1]),
-            'summary': item.split('\n')[2]
-            } for item in items]
+env.globals.update({
+    "color_function": color_about
+    })
 
 def strip_html_tags(line):
     return re.sub(re.compile('<.*?>'), '', line)
@@ -110,10 +84,10 @@ def process_blog():
             [f for f in os.scandir('markdown') if f.is_dir()],
             key = os.path.getmtime, reverse = True
             ):
-        shutil.copytree(folder.path, 'docs/fun/' + folder.name)
+        shutil.copytree(folder.path, 'docs/other/' + folder.name)
 
 
-        markdown_files = list(Path('docs/fun/' + folder.name).rglob('*.md'))
+        markdown_files = list(Path('docs/other/' + folder.name).rglob('*.md'))
         for file in markdown_files:
             with file.open() as f:
                 post = {}
@@ -121,11 +95,11 @@ def process_blog():
                 post['title'] = strip_html_tags([line for line in rendered.split('\n') if '<h1>' in line][0]).strip()
 
                 rendered = process_raw_html(rendered)
-                post['link'] = '/fun/' + folder.name
+                post['link'] = '/other/' + folder.name
                 post['time'] = datetime.fromtimestamp(os.path.getmtime(folder.path)).strftime(
                     'Updated at %H:%M on <span style="display: inline-block">%b %-d %Y</span>')
 
-                if str(file) == 'docs/fun/' + folder.name + '/index.md':
+                if str(file) == 'docs/other/' + folder.name + '/index.md':
                     posts.append(post)
 
                 html_name = '.'.join(file.name.split('.')[:-1] + ['html'])
@@ -140,11 +114,13 @@ def process_blog():
 
 shutil.rmtree('docs')
 os.mkdir('docs')
-os.mkdir('docs/about')
+os.mkdir('docs/experience')
 os.mkdir('docs/portfolio')
-os.mkdir('docs/fun')
-os.mkdir('docs/clouds')
+os.mkdir('docs/trivia')
+os.mkdir('docs/contact')
+os.mkdir('docs/other')
 shutil.copy('sources/style.css', 'docs')
+shutil.copy('sources/style.css.map', 'docs')
 shutil.copy('sources/favicon.ico', 'docs')
 shutil.copy('sources/pfp.png', 'docs')
 shutil.copy('sources/resume.pdf', 'docs')
@@ -156,74 +132,11 @@ def load(template):
     template = env.get_template(template)
     return template
 
-load('home.html').stream(
-        ratios = CLOUD_RATIOS
-        ).dump('docs/index.html')
-load('about.html').stream(
-        color_function = color_about
-        ).dump('docs/about/index.html')
-load('portfolio.html').stream(
-        portfolio = load_portfolio()
-        ).dump('docs/portfolio/index.html')
-load('fun.html').stream(
+load('home.html').stream().dump('docs/index.html')
+load('trivia.html').stream().dump('docs/trivia/index.html')
+load('portfolio.html').stream().dump('docs/portfolio/index.html')
+load('experience.html').stream().dump('docs/experience/index.html')
+load('contact.html').stream().dump('docs/contact/index.html')
+load('other.html').stream(
         posts = process_blog()
-        ).dump('docs/fun/index.html')
-
-def remove_punct(word):
-    return ''.join(c for c in word if c not in punct)
-
-def get_word_tallies():
-    tallies = {}
-    html_files = list(Path('docs/').rglob('*.html'))
-    for file in html_files:
-        with file.open() as f:
-            soup = BeautifulSoup(f.read(), 'html.parser')
-            content = soup.find(id = 'content-main')
-
-            text = content.text
-            text = ' '.join(text.split('/'))
-            text = ' '.join(text.split('\n'))
-            text = ' '.join(text.split('\''))
-
-            for term in text.split(' '):
-                n_term = remove_punct(term)
-                if (n_term in term) and (len(n_term) > 2 or (len(n_term) == 2 and n_term.lower() != n_term)):
-                    if n_term.lower() not in stopwords.words('english'):
-                        tallies[n_term.lower()] = tallies.get(n_term.lower(), 0) + 1
-    # for key in tallies.keys():
-    #     print(key)
-    return tallies
-
-def get_color_gradient(start, stop, steps):
-    colors = []
-    for x in range(steps):
-        start_part = [(steps - x - 1) * v for v in start.rgb]
-        stop_part  = [x * v for v in stop.rgb]
-        combined = [sum(p) / (steps - 1) for p in zip(start_part, stop_part)]
-        colors.append(combined)
-    return colors
-
-def create_svg_from_tallies(tallies):
-    text = ' '.join(sum([[word] * tallies[word] for word in tallies.keys()], start = []))
-    start_color = Color("#7cafc2")
-    stop_color  = Color("#d8d8d8")
-    gradient = get_color_gradient(start_color, stop_color, max(tallies.values()))
-    for ratio in CLOUD_RATIOS:
-        height = (MAX_CLOUD_PX / ratio) ** 0.5
-        width = height * ratio
-        width, height = int(width), int(height)
-        print(width, height, ratio)
-        wordcloud = WordCloud(
-                width = width, height = height,
-                color_func = lambda word, *args, **kwargs: Color(rgb=gradient[tallies[word] - 1]),
-                normalize_plurals = False,
-                collocations = False,
-                background_color = "#181818",
-                max_words = len(tallies.keys()),
-                random_state = random.Random(sum(tallies.values()))
-                ).generate_from_frequencies(tallies)
-        with open('docs/clouds/cloud-%.1f.svg' % ratio, 'w') as f:
-            f.write(wordcloud.to_svg(embed_font = True))
-
-
-create_svg_from_tallies(get_word_tallies())
+        ).dump('docs/other/index.html')

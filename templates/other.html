@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
 {% block c_header %}
-<h1>What else?</h1>
+<h1>More content I've made</h1>
 {% endblock %}
 
 {% block c_main %}
-<div class="list">
-    <p>Here are some posts that I've written:</p>
+<div class="list non-bullet">
     <ul>
         {% for post in posts %}
         <li>

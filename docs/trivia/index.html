@@ -1,0 +1,201 @@
+<html prefix="og: http://ogp.me/ns#">
+    <!--
+ --------
+| Hello! |
+ --------
+      \   ^__^
+       \  (oo)\_______
+          (__)\       )\/\
+              ||----w |
+              ||     ||
+    -->
+    <head>
+
+        <meta property="og:site_name" content="Ishan Kamat" />
+
+        
+        
+        <meta property="og:description" content="Interests of mine" />
+        
+
+        <title>Trivia - Ishan Kamat</title>
+        <meta property="og:title" content="Trivia" />
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="shortcut icon" href="/favicon.ico"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                $('#nav-pane > a').each(
+                    function (index, value) {
+                        var link = $(this).attr('href');
+                        if (
+                            (link !== '/' && window.location.pathname.includes(link)) ||
+                            (link === '/' && window.location.pathname === link)
+                        ) {
+                            $(this).addClass('active');
+                            $('#nav-current-title').html($(this).html());
+                            $('#nav-current-title').attr('href', link);
+                            $(this).addClass('gone');
+                        }
+                    }
+                );
+            });
+
+            function toggleMenu() {
+                var btn = $('#nav-toggle');
+                $('#nav-pane').removeClass('gone');
+                $('#main-pane').removeClass('gone');
+                if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
+                else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
+                $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-toggle-container">
+            <i class="material-icons" id="nav-toggle" onclick="toggleMenu()">menu</i>
+            <a id="nav-current-title"></a>
+        </div>
+        <div id="nav-pane" class="gone">
+            <a href="/">Home</a>
+            <a href="/experience">Experience</a>
+            <a href="/portfolio/">Portfolio</a>
+            <a href="/trivia/">Trivia</a>
+            <a href="/contact/">Contact</a>
+            <a href="/other/">Other</a>
+        </div>
+        <div id="main-pane">
+            <div id="content-container">
+                <div id="content-header">
+                    
+<h1>Interests of mine</h1>
+
+                </div>
+                <div id="content-main">
+                    
+
+
+
+<p>Here are some lists of things that I find notable or that I particularly enjoy:</p>
+
+<div class="multiple-list-container">
+    <div class="list blue">
+    <p class="list-head">Pastimes</p>
+    <ul>
+        
+        <li><span class="foreground">vexillology</span></li>
+        
+        <li><span class="foreground">tinkering</span></li>
+        
+        <li><span class="foreground">video games</span></li>
+        
+        <li><span class="foreground">biking</span></li>
+        
+        <li><span class="foreground">geography</span></li>
+        
+        <li><span class="foreground">hanging out with friends</span></li>
+        
+        <li><span class="foreground">playing with my cat</span></li>
+        
+    </ul>
+</div>
+    <div class="list yellow">
+    <p class="list-head">Foods</p>
+    <ul>
+        
+        <li><span class="foreground">sushi</span></li>
+        
+        <li><span class="foreground">Halal Guys</span></li>
+        
+        <li><span class="foreground">tacos</span></li>
+        
+        <li><span class="foreground">Sichuan cuisine</span></li>
+        
+        <li><span class="foreground">late-night ramen</span></li>
+        
+    </ul>
+</div>
+    <div class="list green">
+    <p class="list-head">Software</p>
+    <ul>
+        
+        <li><span class="foreground">vim</span></li>
+        
+        <li><span class="foreground">Arch Linux</span></li>
+        
+        <li><span class="foreground">i3wm</span></li>
+        
+        <li><span class="foreground">Telegram</span></li>
+        
+    </ul>
+</div>
+    <div class="list orange">
+    <p class="list-head">Games</p>
+    <ul>
+        
+        <li><span class="foreground">Kerbal Space Program</span></li>
+        
+        <li><span class="foreground">Europa Universalis 4</span></li>
+        
+        <li><span class="foreground">Rocket League</span></li>
+        
+        <li><span class="foreground">CS:GO</span></li>
+        
+        <li><span class="foreground">Luftrausers</span></li>
+        
+    </ul>
+</div>
+    <div class="list magenta">
+    <p class="list-head">Flags</p>
+    <ul>
+        
+        <li><span class="foreground">Albania</span></li>
+        
+        <li><span class="foreground">Kyrgyztan</span></li>
+        
+        <li><span class="foreground">Montenegro</span></li>
+        
+    </ul>
+</div>
+    <div class="list red">
+    <p class="list-head">Classes</p>
+    <ul>
+        
+        <li><span class="foreground">Computer Systems</span></li>
+        
+        <li><span class="foreground">Adv. Object-Oriented Programming</span></li>
+        
+        <li><span class="foreground">Parallel Programming</span></li>
+        
+        <li><span class="foreground">Student Venture Fund</span></li>
+        
+    </ul>
+</div>
+    <div class="list cyan">
+    <p class="list-head">Books</p>
+    <ul>
+        
+        <li><span class="foreground">Dune</span></li>
+        
+        <li><span class="foreground">Anna Karenina</span></li>
+        
+        <li><span class="foreground">Ringworld</span></li>
+        
+        <li><span class="foreground">The Castle of Otranto</span></li>
+        
+    </ul>
+</div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

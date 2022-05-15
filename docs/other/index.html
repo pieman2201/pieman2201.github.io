@@ -13,16 +13,13 @@
 
         <meta property="og:site_name" content="Ishan Kamat" />
 
-        {% if not use_header_as_title %}
-        {% set page_title = self._TemplateReference__context.name.split('.')[0].title() %}
-        <meta property="og:description" content="{{ self.c_header() | striptags }}" />
-        {% else %}
-        {% set page_title = self.c_header() | striptags %}
-        <meta property="og:description" content="{{ self.c_main() | striptags | truncate(32) }}" />
-        {% endif %}
+        
+        
+        <meta property="og:description" content="More content I&#39;ve made" />
+        
 
-        <title>{{ page_title }} - Ishan Kamat</title>
-        <meta property="og:title" content="{{ page_title }}" />
+        <title>Other - Ishan Kamat</title>
+        <meta property="og:title" content="Other" />
 
         <link rel="stylesheet" href="/style.css">
         <link rel="shortcut icon" href="/favicon.ico"/>
@@ -77,10 +74,25 @@
         <div id="main-pane">
             <div id="content-container">
                 <div id="content-header">
-                    {% block c_header %}{% endblock %}
+                    
+<h1>More content I've made</h1>
+
                 </div>
                 <div id="content-main">
-                    {% block c_main %}{% endblock %}
+                    
+<div class="list non-bullet">
+    <ul>
+        
+        <li>
+            <div class="blog-post-item">
+                <a href="/other/haxcon">HaxCon</a>
+                <p>Updated at 02:43 on <span style="display: inline-block">Jul 30 2020</span></p>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+
                 </div>
             </div>
         </div>

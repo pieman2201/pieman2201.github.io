@@ -5,32 +5,11 @@
 {% endblock %}
 
 {% block c_main %}
-<p>I've got an <a href="/about">about</a> page and a <a href="/portfolio">portfolio</a>; feel free to check out my <a href="resume.pdf">resume</a> as well. You can also find me online as <a href="https://github.com/pieman2201"><span class="highlight">pieman2201</span></a>. Otherwise, here's a quick overview of the content on this website:</p>
-<img id="cloud" alt="This is a word cloud showing what Ishan Kamat is interested in. Ishan is also known as pieman2201 online. Rice University is where Ishan Kamat studies Computer Science. Houston is Ishan's place of residence. Ishan enjoys coding, competitive programming, and technology in general. Arch Linux is his OS of choice. pieman2201 has projects on GitHub and GitLab." />
-<script>
-    var ratios = {{ ratios }};
-</script>
-<script>
-    var curr_ratio = 0;
-    function resizeCloud() {
-        var height = window.innerHeight - $('#cloud')[0].offsetTop - parseInt($('#content-pane').css('padding-bottom'));
-        var width  = $('#cloud')[0].width;
-        var ratio = width / height;
-        for (var i = 0; i < ratios.length; i++) {
-            if (ratios[i] >= ratio) {
-                ratio = ratios[i];
-                break;
-            }
-        }
-        if (ratio != curr_ratio) {
-            $('#cloud')[0].src = 'clouds/cloud-' + ratio.toFixed(1) + '.svg';
-            curr_ratio = ratio;
-        }
-        $('#cloud').height(height);
-    }
 
-    $(window).resize(resizeCloud);
-    $(document).ready(resizeCloud);
-</script>
+<p>I'm a rising senior at <span class="blue">Rice University</span>, where I'm studying Computer Science with a minor in Entrepreneurship.</p>
+
+<p>{{ color_function("My programming language of choice is Python, and I\'ve been working with Java and C recently for some of my CS courses. I also have some experience with JS and jQuery for web development.") | safe }}</p>
+
+<p>I live and go to school in <span class="cyan">Houston</span>, though I'll be in <span class="green">NYC</span> during summer 2022 for a software engineering internship. I'm looking forward to being a TA for COMP 215 at <span class="blue">Rice</span> in fall 2022.</p>
 
 {% endblock %}

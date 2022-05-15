@@ -12,18 +12,14 @@
     <head>
 
         <meta property="og:site_name" content="Ishan Kamat" />
-        <meta property="og:image" content="http://ishankam.at/pfp.png" />
 
         
         
-        <meta property="og:description" content="What have I done?" />
+        <meta property="og:description" content="Projects I&#39;ve worked on" />
         
-
-        <meta name="description" content="Hi, I'm Ishan Kamat (pieman2201). I'm interested in software, technology, flags, and more. Take a look at my portfolio, resume, or bio."/>
 
         <title>Portfolio - Ishan Kamat</title>
         <meta property="og:title" content="Portfolio" />
-
 
         <link rel="stylesheet" href="/style.css">
         <link rel="shortcut icon" href="/favicon.ico"/>
@@ -34,18 +30,7 @@
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"></script>
         <script>
-            function setHeaderHeight() {
-                if ($('#nav-pane > img').css('display') === "none") {
-                    $('#content-header').css('height', 'auto');
-                } else {
-                    $('#content-header').height(
-                        $('#nav-pane').width()
-                    );
-                }
-            }
-
             $(document).ready(function() {
-                setHeaderHeight();
                 $('#nav-pane > a').each(
                     function (index, value) {
                         var link = $(this).attr('href');
@@ -62,17 +47,13 @@
                 );
             });
 
-            $(window).resize(function() {
-                setHeaderHeight();
-            });
-
             function toggleMenu() {
                 var btn = $('#nav-toggle');
                 $('#nav-pane').removeClass('gone');
-                $('#content-pane').removeClass('gone');
+                $('#main-pane').removeClass('gone');
                 if (btn.html() === 'menu') { btn.html('close'); $('#nav-current-title').addClass('gone'); }
                 else { btn.html('menu'); $('#nav-current-title').removeClass('gone'); }
-                $((btn.html() === 'menu') ? '#nav-pane' : '#content-pane').addClass('gone');
+                $((btn.html() === 'menu') ? '#nav-pane' : '#main-pane').addClass('gone');
             }
         </script>
     </head>
@@ -83,157 +64,98 @@
             <a id="nav-current-title"></a>
         </div>
         <div id="nav-pane" class="gone">
-            <img src="/pfp.png">
             <a href="/">Home</a>
-            <a href="/about/">About</a>
+            <a href="/experience">Experience</a>
             <a href="/portfolio/">Portfolio</a>
-            <a href="/fun/">Fun</a>
+            <a href="/trivia/">Trivia</a>
+            <a href="/contact/">Contact</a>
+            <a href="/other/">Other</a>
         </div>
-        <div id="content-pane">
-            <div id="content-header">
-                
-<h1>What have I done?</h1>
+        <div id="main-pane">
+            <div id="content-container">
+                <div id="content-header">
+                    
+<h1>Projects I've worked on</h1>
 
-            </div>
-            <div id="content-main">
-                
-<div class="list">
-    <p>Here's a list of some projects that I've worked on, arranged in no particular order:</p>
+                </div>
+                <div id="content-main">
+                    
+
+
+
+
+<div class="list non-bullet">
     <ul>
-        
         <li>
-            <div class="portfolio-item">
-                <div class="portfolio-item-header">
-                    <p class="portfolio-item-name">serveup</p>
-                    <p class="portfolio-item-sep">--</p>
-                    <p class="portfolio-item-tech"><span class="blue">Python</span>/<wbr><span class="cyan">Flutter</span></p>
-                </div>
-                <p class="portfolio-item-summary">
-                    An app for students to post and sign up for community service events within an organization. I worked on this for my high school's community service office.
-                </p>
-            </div>
-        </li>
-        
+    <div class="portfolio-item">
+        <div class="portfolio-item-header">
+            <p class="portfolio-item-name">snackstocker</p>
+            <p class="portfolio-item-tech"><span class="blue">Python</span>/<wbr><span class="yellow">JS</span></p>
+        </div>
+        <p class="portfolio-item-summary">
+        A solution for finding, searching, and viewing office snack counters. An IoT device uses computer vision to keep track of snack availability, and employees can check a mobile portal to see whether their favorite snack is in stock. I worked on this during an internship as a hackathon project alongside 3 other interns, and my primary responsibility was developing a CV model that could recognize and learn about different types of snacks by sight.
+        </p>
+    </div>
+</li>
         <li>
-            <div class="portfolio-item">
-                <div class="portfolio-item-header">
-                    <p class="portfolio-item-name">axes</p>
-                    <p class="portfolio-item-sep">--</p>
-                    <p class="portfolio-item-tech"><span class="magenta">C</span></p>
-                </div>
-                <p class="portfolio-item-summary">
-                    A simple <span class="green">Android</span> arcade game where the player targets falling blocks by manipulating the axes of a crosshair.
-                </p>
-            </div>
-        </li>
-        
+    <div class="portfolio-item">
+        <div class="portfolio-item-header">
+            <p class="portfolio-item-name">serveup</p>
+            <p class="portfolio-item-tech"><span class="blue">Python</span>/<wbr><span class="cyan">Flutter</span></p>
+        </div>
+        <p class="portfolio-item-summary">
+        An app for students to post and sign up for community service events within an organization. I worked on this with 2 other students for my high school's community service office.
+        </p>
+    </div>
+</li>
         <li>
-            <div class="portfolio-item">
-                <div class="portfolio-item-header">
-                    <p class="portfolio-item-name">aliasbot</p>
-                    <p class="portfolio-item-sep">--</p>
-                    <p class="portfolio-item-tech"><span class="blue">Python</span></p>
-                </div>
-                <p class="portfolio-item-summary">
-                    A <span class="cyan">Telegram</span> bot enabling users to save notes or links which can be recalled through custom keyword commands.
-                </p>
-            </div>
-        </li>
-        
+    <div class="portfolio-item">
+        <div class="portfolio-item-header">
+            <p class="portfolio-item-name">axes</p>
+            <p class="portfolio-item-tech"><span class="magenta">C</span></p>
+        </div>
+        <p class="portfolio-item-summary">
+        A simple <span class="green">Android</span> arcade game where the player targets falling blocks by manipulating the axes of a crosshair.
+        </p>
+    </div>
+</li>
         <li>
-            <div class="portfolio-item">
-                <div class="portfolio-item-header">
-                    <p class="portfolio-item-name">brochstein</p>
-                    <p class="portfolio-item-sep">--</p>
-                    <p class="portfolio-item-tech"><span class="cyan">Flutter</span></p>
-                </div>
-                <p class="portfolio-item-summary">
-                    An app showcasing the architectural merits of the Brochstein Pavilion at <span class="blue">Rice</span>. I wrote this as a summary project for my architecture class in college.
-                </p>
-            </div>
-        </li>
-        
+    <div class="portfolio-item">
+        <div class="portfolio-item-header">
+            <p class="portfolio-item-name">aliasbot</p>
+            <p class="portfolio-item-tech"><span class="blue">Python</span></p>
+        </div>
+        <p class="portfolio-item-summary">
+        A <span class="cyan">Telegram</span> bot that lets users save notes or links which can be recalled through custom keyword commands.
+        </p>
+    </div>
+</li>
         <li>
-            <div class="portfolio-item">
-                <div class="portfolio-item-header">
-                    <p class="portfolio-item-name">armw</p>
-                    <p class="portfolio-item-sep">--</p>
-                    <p class="portfolio-item-tech"><span class="magenta">C</span></p>
-                </div>
-                <p class="portfolio-item-summary">
-                    A toy window manager for X11 (ARMW: Armw Randomly Manages Windows).
-                </p>
-            </div>
-        </li>
-        
+    <div class="portfolio-item">
+        <div class="portfolio-item-header">
+            <p class="portfolio-item-name">generalissimo</p>
+            <p class="portfolio-item-tech"><span class="red">Java</span></p>
+        </div>
+        <p class="portfolio-item-summary">
+        An <span class="green">Android</span> client for webdiplomacy.net, a site dedicated to hosting the popular strategy game Diplomacy.
+        </p>
+    </div>
+</li>
         <li>
-            <div class="portfolio-item">
-                <div class="portfolio-item-header">
-                    <p class="portfolio-item-name">generalissimo</p>
-                    <p class="portfolio-item-sep">--</p>
-                    <p class="portfolio-item-tech"><span class="red">Java</span></p>
-                </div>
-                <p class="portfolio-item-summary">
-                    An <span class="green">Android</span> client for webdiplomacy.net, a site dedicated to hosting the popular strategy game Diplomacy.
-                </p>
-            </div>
-        </li>
-        
-        <li>
-            <div class="portfolio-item">
-                <div class="portfolio-item-header">
-                    <p class="portfolio-item-name">tp.org</p>
-                    <p class="portfolio-item-sep">--</p>
-                    <p class="portfolio-item-tech"><span class="green">Vue</span>/<wbr><span class="blue">WordPress</span></p>
-                </div>
-                <p class="portfolio-item-summary">
-                    A Wikipedia-esque index of theatre philosophy topics, compiled by academic researchers. I worked on this as part of my student webdev job at <span class="orange">UT</span>.
-                </p>
-            </div>
-        </li>
-        
-        <li>
-            <div class="portfolio-item">
-                <div class="portfolio-item-header">
-                    <p class="portfolio-item-name">cv-log</p>
-                    <p class="portfolio-item-sep">--</p>
-                    <p class="portfolio-item-tech"><span class="blue">Python</span></p>
-                </div>
-                <p class="portfolio-item-summary">
-                    A script to analyze video logs of lab equipment and extract measurement values using computer vision (OpenCV). I wrote this to help out with my duties as an intern at Fannin Innovation Studio.
-                </p>
-            </div>
-        </li>
-        
-        <li>
-            <div class="portfolio-item">
-                <div class="portfolio-item-header">
-                    <p class="portfolio-item-name">wankel</p>
-                    <p class="portfolio-item-sep">--</p>
-                    <p class="portfolio-item-tech"><span class="blue">Python</span>/<wbr><span class="cyan">jQuery</span></p>
-                </div>
-                <p class="portfolio-item-summary">
-                    A social platform based around a central community timeline where users can post events that they've completed.
-                </p>
-            </div>
-        </li>
-        
-        <li>
-            <div class="portfolio-item">
-                <div class="portfolio-item-header">
-                    <p class="portfolio-item-name">this site</p>
-                    <p class="portfolio-item-sep">--</p>
-                    <p class="portfolio-item-tech"><span class="blue">Python</span>/<wbr><span class="magenta">Sass</span>/<wbr><span class="cyan">jQuery</span></p>
-                </div>
-                <p class="portfolio-item-summary">
-                    A website about me, rendered once and served via GitHub Pages. I wrote a simple SSG to operate on a collection of Jinja2 templates, and I styled for responsiveness across desktop and mobile browsers.
-                </p>
-            </div>
-        </li>
-        
+    <div class="portfolio-item">
+        <div class="portfolio-item-header">
+            <p class="portfolio-item-name">wankel</p>
+            <p class="portfolio-item-tech"><span class="blue">Python</span>/<wbr><span class="cyan">jQuery</span></p>
+        </div>
+        <p class="portfolio-item-summary">
+        A social platform named after the Wankel rotary engine where users can post events and achievements to a central community timeline.
+        </p>
+    </div>
+</li>
     </ul>
 </div>
 
+                </div>
             </div>
         </div>
     </body>

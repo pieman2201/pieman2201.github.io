@@ -121,11 +121,11 @@ os.mkdir('docs/contact')
 os.mkdir('docs/other')
 shutil.copy('sources/style.css', 'docs')
 shutil.copy('sources/style.css.map', 'docs')
-shutil.copy('sources/favicon.ico', 'docs')
-shutil.copy('sources/pfp.png', 'docs')
 shutil.copy('sources/resume.pdf', 'docs')
 shutil.copy('sources/CNAME', 'docs')
 shutil.copy('sources/sitemap.txt', 'docs')
+shutil.copy('sources/.nojekyll', 'docs')
+shutil.copytree('sources/icons', 'docs/icons')
 
 
 def load(template):

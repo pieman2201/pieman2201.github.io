@@ -30,7 +30,7 @@ a {
 }
 #nav-toggle-container #nav-current-title {
   color: #f8f8f8;
-  margin: 0 0 0 1em;
+  margin: auto 0 auto 1em;
   text-decoration: none;
 }
 @media (max-width: 960px) {
@@ -41,7 +41,8 @@ a {
 
 body {
   background-color: #181818;
-  font: 18px monospace;
+  font: 16px "Noto Sans Mono", monospace;
+  letter-spacing: -0.03125em;
   color: #d8d8d8;
   margin: 0;
   display: flex;
@@ -171,6 +172,33 @@ body {
 #content-container #content-main {
   padding-top: 0.5em;
 }
+#content-container #content-main table {
+  font: inherit;
+  width: 100%;
+  margin-bottom: 1em;
+}
+#content-container #content-main table thead {
+  color: #f7ca88;
+}
+#content-container #content-main table img {
+  max-width: 100%;
+  margin: auto;
+}
+#content-container #content-main h2 {
+  color: #7cafc2;
+}
+#content-container #content-main h3 {
+  color: #a1b56c;
+}
+#content-container #content-main h4 {
+  color: #f7ca88;
+}
+#content-container #content-main h5 {
+  color: #ba8baf;
+}
+#content-container #content-main h6 {
+  color: #dc9656;
+}
 #content-container #content-main p {
   margin-top: 0;
   margin-bottom: 1em;
@@ -187,11 +215,6 @@ body {
     margin: 1em 0;
     max-width: 100%;
   }
-}
-#content-container #content-main img#cloud {
-  max-width: 100%;
-  width: 100%;
-  margin: 0;
 }
 #content-container #content-main a {
   color: #d8d8d8;
@@ -304,24 +327,24 @@ body {
     display: none;
   }
 }
-#content-container .multiple-list-container {
+#content-container #content-main .multiple-list-container {
   display: flex;
   flex-wrap: wrap;
 }
 @media (max-width: 960px) {
-  #content-container .multiple-list-container {
+  #content-container #content-main .multiple-list-container {
     flex-direction: column;
   }
 }
-#content-container .multiple-list-container .list {
+#content-container #content-main .multiple-list-container .list {
   margin-right: 1em;
 }
-#content-container .list ul {
+#content-container #content-main .list ul {
   margin-bottom: 1em;
   margin-top: 0;
 }
 @media (max-width: 960px) {
-  #content-container .list.non-bullet ul {
+  #content-container #content-main .list.non-bullet ul {
     margin-left: 0;
     margin-right: 0;
     padding-inline-start: 0;
@@ -329,10 +352,10 @@ body {
     list-style-type: none;
   }
 }
-#content-container .list a {
+#content-container #content-main .list a {
   text-decoration: none;
 }
-#content-container .list p.list-head {
+#content-container #content-main .list .list-head {
   margin-bottom: 0.5em;
 }
 

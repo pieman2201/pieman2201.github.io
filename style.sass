@@ -33,7 +33,7 @@ a
 
   #nav-current-title
     color: $nav-foreground
-    margin: 0 0 0 1em
+    margin: auto 0 auto 1em
     text-decoration: none
     @media ($small)
       &.gone
@@ -41,7 +41,8 @@ a
 
 body
   background-color: $background
-  font: 18px monospace
+  font: 16px 'Noto Sans Mono', monospace
+  letter-spacing: -0.03125em
   color: $foreground
   margin: 0
   display: flex
@@ -152,6 +153,33 @@ body
   #content-main
     padding-top: 0.5em
 
+    table
+      font: inherit
+      width: 100%
+      margin-bottom: 1em
+
+      thead
+        color: #f7ca88
+
+      img
+        max-width: 100%
+        margin: auto
+
+    h2
+      color: #7cafc2
+
+    h3
+      color: #a1b56c
+
+    h4
+      color: #f7ca88
+
+    h5
+      color: #ba8baf
+
+    h6
+      color: #dc9656
+
     p
       margin-top: 0
       margin-bottom: 1em
@@ -164,11 +192,6 @@ body
       @media ($small)
         margin: 1em 0
         max-width: 100%
-
-      &#cloud
-        max-width: 100%
-        width: 100%
-        margin: 0
 
     a
       color: $foreground
@@ -266,33 +289,32 @@ body
         @media ($small)
           display: none
 
+    .multiple-list-container
+      display: flex
+      flex-wrap: wrap
+      @media ($small)
+        flex-direction: column
 
-  .multiple-list-container
-    display: flex
-    flex-wrap: wrap
-    @media ($small)
-      flex-direction: column
+      .list
+        margin-right: 1em
 
     .list
-      margin-right: 1em
-
-  .list
-    ul
-      margin-bottom: 1em
-      margin-top: 0
-    &.non-bullet
       ul
-        @media ($small)
-          margin-left: 0
-          margin-right: 0
-          padding-inline-start: 0
-          padding-inline-end: 0
-          list-style-type: none
+        margin-bottom: 1em
+        margin-top: 0
+      &.non-bullet
+        ul
+          @media ($small)
+            margin-left: 0
+            margin-right: 0
+            padding-inline-start: 0
+            padding-inline-end: 0
+            list-style-type: none
 
-    a
-      text-decoration: none
+      a
+        text-decoration: none
 
-    p.list-head
-      margin-bottom: 0.5em
+      .list-head
+        margin-bottom: 0.5em
 
 

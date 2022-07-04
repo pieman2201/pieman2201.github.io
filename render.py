@@ -11,7 +11,7 @@ env = Environment(
         loader      = FileSystemLoader('templates'),
         autoescape  = select_autoescape(['html','xml']),
         )
-mkd = Markdown(extras=['fenced-code-blocks'])
+mkd = Markdown(extras=['fenced-code-blocks', 'tables'])
 
 COLOR_MAP = {
         'red':      [
@@ -37,6 +37,7 @@ COLOR_MAP = {
             'python',
             'css',
             'wordpress',
+            'typescript',
             ],
         'magenta':  [
             'c',
@@ -64,8 +65,15 @@ def color_tech_term(term):
     color = act_cm.get(term.lower(), '')
     return ('<span class="%s">%s</span>' % (color, term)) if len(color) else term
 
+def extract_first_image(html_str):
+    try:
+        return html_str.split('<img')[1].split("src=\"")[1].split('"')[0]
+    except:
+        return None
+
 env.globals.update({
-    "color_function": color_about
+    "color_function": color_about,
+    "extract_first_image": extract_first_image,
     })
 
 def strip_html_tags(line):

@@ -133,6 +133,7 @@ shutil.copy('sources/resume.pdf', 'docs')
 shutil.copy('sources/CNAME', 'docs')
 shutil.copy('sources/sitemap.txt', 'docs')
 shutil.copy('sources/.nojekyll', 'docs')
+shutil.copy('sources/hiitsme.png', 'docs')
 shutil.copytree('sources/icons', 'docs/icons')
 
 
